@@ -1,13 +1,18 @@
 #header {
-    background-color: #1c1c1b;
+    background-color: rgb(28, 28, 27, 0.5);
     transition: 0.20s;
+    position: fixed;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    width: 100%;
     z-index: 0;
 }
 #header:hover {
     background-color: red;
+    opacity: 100%;
     z-index: 0;
 }
 
