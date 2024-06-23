@@ -1,9 +1,12 @@
 
 
 import HomePage from "./home/page";
+import { Header } from "./layout";
 export default function Home() {
     return (
-        <HomePage />
+        <main>
+            <HomePage />
+        </main>
     );
 }
 

@@ -27,7 +27,7 @@ export default function RootLayout({
   )
 }
 
-function Header() {
+export function Header() {
   return (
     <header id={header_styles.header}>
       <div id={header_styles.header_image}>
@@ -38,7 +38,7 @@ function Header() {
           height={50}
         />
       </div>
-      <div id={header_styles.header_menu}>
+      <div id={header_styles.header_menu_1}>
         <Link id={header_styles.header_buttons} href="/">Home</Link>
         <Link id={header_styles.header_buttons} href="/projects">Projects</Link>
         <Link id={header_styles.header_buttons} href="/timeline">Timeline</Link>

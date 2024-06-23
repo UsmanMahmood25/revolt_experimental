@@ -1,33 +1,78 @@
-#header {
-    background-color: rgb(28, 28, 27, 0.5);
-    transition: 0.20s;
-    position: fixed;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    width: 100%;
-    z-index: 0;
+
+/* Laptop Dimensions */
+@media screen and (min-width: 925px) {
+    #header {
+        background-color: rgba(28, 28, 27, 0.5);
+        transition: 0.20s;
+        position: fixed;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        z-index: 0;
+    }
+    #header_menu_1 {
+        font-size: large;
+        display: flex;
+        flex-direction: row;
+        padding-top: 17.5px;
+        width: auto;
+        justify-content: center;
+        z-index: 2;
+        margin-left: -50px; 
+        flex: 1;
+    }
+    #header_image {
+        padding-top: 0.25%;
+        padding-left: 0.25%;
+        padding-bottom: 0.25%;
+        z-index: 2;
+    }
 }
+
+
+/* Tablet Dimensions */
+@media screen and (max-width: 925px) and (min-width: 646px) {
+    #header {
+        background-color: rgba(28, 28, 27, 0.5);
+        transition: 0.20s;
+        position: fixed;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        z-index: 0;
+    }
+    #header_menu_1 {
+        font-size: large;
+        display: flex;
+        flex-direction: row;
+        padding-top: 1.5px;
+        padding-bottom: 5.5px;
+        width: auto;
+        justify-content: center;
+        z-index: 2;
+    }
+    #header_image {
+        padding: 0.25%;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+}
+
 #header:hover {
     background-color: red;
     opacity: 100%;
     z-index: 0;
-}
-
-#header_image {
-    padding: 0.25%;
-    padding-right: 7.5%;
-    z-index: 2;
-}
-
-#header_menu {
-    font-size: large;
-    display: flex;
-    flex-direction: row;
-    padding-top: 17.5px;
-    z-index: 2;
 }
 
 #header_buttons {
@@ -52,4 +97,4 @@
     src: url("font_styles_title/Benzin-Bold.ttf");
 }
 
-
+/* 1024 px width, less than that and header style changes */
