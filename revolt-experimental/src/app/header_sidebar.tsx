@@ -6,7 +6,6 @@ import header_styles from "@/styles/Header.module.css";
 
 const SidebarComponent: React.FC = () => {
     const [sidebarVisible, setSidebarVisible] = useState<boolean>(false);
-    const [selectedButton, setSelectedButton] = useState<string>('');
     const sidebarRef = useRef<HTMLDivElement>(null);
 
     const showSidebar = (): void => {
@@ -37,27 +36,33 @@ const SidebarComponent: React.FC = () => {
     }, [sidebarVisible]);
 
     return (
-        <div className={header_styles.sidebarContainer}  ref={sidebarRef}>
-            {!sidebarVisible && <button onClick={showSidebar} id={header_styles.sidebarButton}><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>}
-            {sidebarVisible && <button onClick={hideSidebar} id={header_styles.sidebarButton}><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>}
-            <div className={`sidebar ${sidebarVisible ? 'visible' : 'hidden'}`}>
-                <Link href="/" id={header_styles.header_buttons} onClick={() => setSelectedButton('home')}>Home</Link>
-                <Link href="/projects" id={header_styles.header_buttons} onClick={() => setSelectedButton('projects')}>Projects</Link>
-                <Link href="/timeline" id={header_styles.header_buttons} onClick={() => setSelectedButton('timeline')}>Timeline</Link>
-                <Link href="/sponsors" id={header_styles.header_buttons} onClick={() => setSelectedButton('sponsors')}>Sponsors</Link>
-                <Link href="/team" id={header_styles.header_buttons} onClick={() => setSelectedButton('team')}>Team</Link>
+        <div className={header_styles.sidebarContainer} ref={sidebarRef}>
+            {!sidebarVisible && (
+                <button onClick={showSidebar} id={header_styles.sidebarButton}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            )}
+            {sidebarVisible && (
+                <button onClick={hideSidebar} id={header_styles.closeButton}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            )}
+            <div className={`${header_styles.sidebar} ${sidebarVisible ? header_styles.visible : header_styles.hidden}`}>
+                <Link href="/" id={header_styles.header_buttons} onClick={hideSidebar}>Home</Link>
+                <Link href="/projects" id={header_styles.header_buttons} onClick={hideSidebar}>Projects</Link>
+                <Link href="/timeline" id={header_styles.header_buttons} onClick={hideSidebar}>Timeline</Link>
+                <Link href="/sponsors" id={header_styles.header_buttons} onClick={hideSidebar}>Sponsors</Link>
+                <Link href="/team" id={header_styles.header_buttons} onClick={hideSidebar}>Team</Link>
             </div>
-            <style jsx>{`
-                .sidebar {
-                    display: none;
-                }
-                .sidebar.visible {
-                    display: flex;
-                    flex-direction: column;
-                }
-            `}</style>
         </div>
-);
+    );
 };
 
 export default SidebarComponent;

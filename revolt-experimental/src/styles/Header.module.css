@@ -114,7 +114,7 @@
 /* Phone Dimensions */
 @media screen and (max-width: 645px) {
     #header {
-        background-color: rgba(28, 28, 27, 0.8);
+        background-color: rgba(28, 28, 27, 0.5);
         transition: 0.20s;
         position: fixed;
         display: flex;
@@ -131,7 +131,7 @@
         padding-top: 0.25%;
         padding-left: 0.25%;
         padding-bottom: 0.25%;
-        z-index: 2;
+        z-index: 1010;
     }
     #header_menu {
         display: none;
@@ -148,22 +148,60 @@
         align-items: flex-start;
         justify-content: flex-start;
     }
+    .sidebarContainer {
+        position: relative;
+    }
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(255, 0, 0, 0.9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(-100%);
+        z-index: 1000;
+    }
+    .visible {
+        transform: translateX(0);
+    }
+    .hidden {
+        transform: translateX(-100%);
+    }
+    #sidebarButton, #closeButton {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 1001;
+    }
+    #sidebarButton {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+    }
+    #closeButton {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+    }
     #header_buttons {
-        padding-left: 2.5%;
-        padding-right: 2.5%;
-        font-size: small;
+        margin: 15px 0;
+        font-size: large;
         font-family: "Benzin-Regular";
         text-transform: uppercase;
+        color: white;
+        text-decoration: none;
         transition: 0.2s;
-        z-index: 2;
+        z-index: 1001;
     }
     #header_buttons:hover {
         font-family: "Benzin-Bold";
-        color: red;
         transform: scale(1.1);
-    }
-    #sidebar_button {
-        display: block;
     }
 }
 
