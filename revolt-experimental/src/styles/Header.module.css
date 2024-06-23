@@ -15,7 +15,13 @@
         width: 100%;
         z-index: 0;
     }
-    #header_menu_1 {
+    #header_image {
+        padding-top: 0.25%;
+        padding-left: 0.25%;
+        padding-bottom: 0.25%;
+        z-index: 2;
+    }
+    #header_menu{
         font-size: large;
         display: flex;
         flex-direction: row;
@@ -25,12 +31,6 @@
         z-index: 2;
         margin-left: -50px; 
         flex: 1;
-    }
-    #header_image {
-        padding-top: 0.25%;
-        padding-left: 0.25%;
-        padding-bottom: 0.25%;
-        z-index: 2;
     }
 }
 
@@ -51,7 +51,13 @@
         width: 100%;
         z-index: 0;
     }
-    #header_menu_1 {
+    #header_image {
+        padding: 0.25%;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+    #header_menu{
         font-size: large;
         display: flex;
         flex-direction: row;
@@ -61,13 +67,9 @@
         justify-content: center;
         z-index: 2;
     }
-    #header_image {
-        padding: 0.25%;
-        align-items: center;
-        justify-content: center;
-        z-index: 2;
-    }
 }
+
+
 
 #header:hover {
     background-color: red;

@@ -38,13 +38,16 @@ export function Header() {
           height={50}
         />
       </div>
-      <div id={header_styles.header_menu_1}>
+      <div id={header_styles.header_menu}>
         <Link id={header_styles.header_buttons} href="/">Home</Link>
         <Link id={header_styles.header_buttons} href="/projects">Projects</Link>
         <Link id={header_styles.header_buttons} href="/timeline">Timeline</Link>
         <Link id={header_styles.header_buttons} href="/sponsors">Sponsors</Link>
         <Link id={header_styles.header_buttons} href="/team">Team</Link>
       </div>
+      {/* <div id={header_styles.header_siderbar}>
+
+      </div> */}
     </header>
   );
 }
