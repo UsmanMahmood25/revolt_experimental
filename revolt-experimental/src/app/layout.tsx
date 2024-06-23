@@ -54,7 +54,6 @@ export function Header() {
         <SidebarComponent />
       </div>
 
-      
     </header>
   );
 }
