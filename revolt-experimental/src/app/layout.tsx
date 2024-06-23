@@ -1,9 +1,12 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import "./globals.css"
 import header_styles from "@/styles/Header.module.css";
 import footer_styles from "@/styles/Footer.module.css";
+import "@/app/header_sidebar";
+import SidebarComponent from "@/app/header_sidebar";
 
 export const metadata: Metadata = {
   title: 'ReVOLT',
@@ -38,6 +41,7 @@ export function Header() {
           height={50}
         />
       </div>
+
       <div id={header_styles.header_menu}>
         <Link id={header_styles.header_buttons} href="/">Home</Link>
         <Link id={header_styles.header_buttons} href="/projects">Projects</Link>
@@ -45,9 +49,12 @@ export function Header() {
         <Link id={header_styles.header_buttons} href="/sponsors">Sponsors</Link>
         <Link id={header_styles.header_buttons} href="/team">Team</Link>
       </div>
-      {/* <div id={header_styles.header_siderbar}>
+        
+      <div id={header_styles.header_sidebar}>
+        <SidebarComponent />
+      </div>
 
-      </div> */}
+      
     </header>
   );
 }
