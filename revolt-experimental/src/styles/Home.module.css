@@ -9,6 +9,7 @@
         align-items: center;
         padding-top: 80px;
         padding-bottom: 4vw;
+        width: 100%;
         
     }
     
@@ -18,6 +19,7 @@
         align-items: end;
         font-family: "Benzin-Bold";
         transition: 0.5s;
+        width: 100%;
     }
     #home_pg_h_text:hover {
         font-family: "Benzin-Regular";
@@ -47,8 +49,9 @@
     #home_pg_h_img {
         align-items: center;
         padding-left: 9%;
-        padding-top: 50px;
+        padding-top: 0px;
         padding-right: 10%;
+        width: 50%;
     }
     
     #our_work_component {
