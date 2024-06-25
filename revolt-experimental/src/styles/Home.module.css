@@ -8,7 +8,7 @@
         justify-content: center;
         align-items: center;
         padding-top: 80px;
-        padding-bottom: 5vw;
+        padding-bottom: 4vw;
         
     }
     
@@ -33,6 +33,9 @@
         padding-right: 10%;
         padding-top: -30%;
         transition: 0.5s;
+    }
+    #home_pg_h_button:not(:first-child) {
+        margin-top: -3vw; /* Adjust this value as needed */
     }
     #home_pg_h_button:hover {
         font-family: "Benzin-Bold";
