@@ -57,7 +57,7 @@
 
 
 /* Tablet Dimensions */
-@media screen and (max-width: 925px) and (min-width: 646px) {
+@media screen and (max-width: 924px) and (min-width: 646px) {
     #header {
         background-color: rgba(28, 28, 27, 0.5);
         transition: 0.20s;

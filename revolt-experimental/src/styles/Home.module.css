@@ -1,4 +1,72 @@
+
+/* Laptop Dimensions */
+@media screen and (min-width: 925px) {
+    #home_pg_header {
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-top: 80px;
+        padding-bottom: 5vw;
+        
+    }
+    
+    #home_pg_h_text {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        font-family: "Benzin-Bold";
+        transition: 0.5s;
+    }
+    #home_pg_h_text:hover {
+        font-family: "Benzin-Regular";
+        transition: 1.5s;
+    }
+    
+    #home_pg_h_button {
+        text-transform: uppercase;
+        /* margin-bottom: -4vw; */
+        margin-left: 75px;
+        font-size: 6.5vw;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: -30%;
+        transition: 0.5s;
+    }
+    #home_pg_h_button:hover {
+        font-family: "Benzin-Bold";
+        color: red;
+        transform: scale(1.01);
+        transition: 0.5s;
+    }
+    
+    
+    #home_pg_h_img {
+        align-items: center;
+        padding-left: 9%;
+        padding-top: 50px;
+        padding-right: 10%;
+    }
+    
+    #our_work_component {
+        background-color: rgba(28, 28, 27, 1);
+        display: flex;
+        flex-direction: row;
+    }
+    
+}
+
 #h1 {
     font-size: 150%;
     font-weight: bold;
+}
+
+@font-face {
+    font-family: "Benzin-Regular";
+    src: url("font_styles_title/Benzin-Regular.ttf");
+}
+@font-face {
+    font-family: "Benzin-Bold";
+    src: url("font_styles_title/Benzin-Bold.ttf");
 }

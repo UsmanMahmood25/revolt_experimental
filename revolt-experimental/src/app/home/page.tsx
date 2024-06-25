@@ -10,32 +10,45 @@ export const metadata = {
 export default function HomePage() {
     return (
         <main>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
-        <h1 id={home_styles.h1}>Home Page</h1>
+            <div id={home_styles.home_pg_header}>
+                <div id={home_styles.home_pg_h_text}>
+                    <Link id={home_styles.home_pg_h_button} href="/">Restore</Link>
+                    <Link id={home_styles.home_pg_h_button} href="/">Innovate</Link>
+                    <Link id={home_styles.home_pg_h_button} href="/">Modernize</Link>
+                </div>
+                <div id={home_styles.home_pg_h_img}>
+                <h1 id={home_styles.h1}>3d View of Bike</h1>
+                </div>
+            </div>
+            <div id={home_styles.our_work_component}>
+                <h1 id={home_styles.h1}>Home Page</h1>
+            </div>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
+            <h1 id={home_styles.h1}>Home Page</h1>
         </main>
     );
 }
