@@ -12,9 +12,9 @@ export default function HomePage() {
         <main>
             <div id={home_styles.home_pg_header}>
                 <div id={home_styles.home_pg_h_text}>
-                    <Link id={home_styles.home_pg_h_button} href="/">Restore</Link>
-                    <Link id={home_styles.home_pg_h_button} href="/">Innovate</Link>
-                    <Link id={home_styles.home_pg_h_button} href="/">Modernize</Link>
+                <Link id={home_styles.home_pg_h_button} href="/projects#specific_section">Restore</Link>
+                    <Link id={home_styles.home_pg_h_button} href="/team">Innovate</Link>
+                    <Link id={home_styles.home_pg_h_button} href="/timeline">Modernize</Link>
                 </div>
                 <div id={home_styles.home_pg_h_img}>
                 <h1 id={home_styles.h1}>3d View of Bike</h1>

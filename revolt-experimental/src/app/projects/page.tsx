@@ -1,4 +1,7 @@
-
+import Image from "next/image";
+import Link from "next/link";
+import ProjectsItem from "./projects_items";
+import projects_styles from "@/styles/Projects.module.css";
 
 // ReVOLT Projects Page
 export const metadata = {
@@ -7,6 +10,8 @@ export const metadata = {
 
 export default function Projects() {
     return (
-        <h1>Projects Page</h1>
+        <main>
+            <ProjectsItem />
+        </main>
     );
 }
