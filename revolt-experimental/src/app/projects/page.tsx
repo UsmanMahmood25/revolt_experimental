@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import ProjectsItem from "./projects_items";
+import ProjectsItem from "./Projects_Items";
 import projects_styles from "@/styles/Projects.module.css";
 
 // ReVOLT Projects Page

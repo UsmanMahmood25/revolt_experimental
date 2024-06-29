@@ -13,18 +13,18 @@
         -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
         width: 100%;
-        z-index: 0;
+        z-index: 10;
     }
     #header:hover {
         background-color: red;
         opacity: 100%;
-        z-index: 0;
+        z-index: 10;
     }
     #header_image {
         padding-top: 0.25%;
         padding-left: 0.25%;
         padding-bottom: 0.25%;
-        z-index: 2;
+        z-index: 12;
     }
     #header_menu{
         font-size: large;
@@ -33,7 +33,7 @@
         padding-top: 17.5px;
         width: auto;
         justify-content: center;
-        z-index: 2;
+        z-index: 12;
         margin-left: -50px; 
         flex: 1;
     }
@@ -47,7 +47,7 @@
         font-family: "Benzin-Regular";
         text-transform: uppercase;
         transition: 0.2s;
-        z-index: 2;
+        z-index: 12;
     }
     #header_buttons:hover {
         font-family: "Benzin-Bold";
@@ -70,18 +70,18 @@
         -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
         width: 100%;
-        z-index: 0;
+        z-index: 10;
     }
     #header:hover {
         background-color: red;
         opacity: 100%;
-        z-index: 0;
+        z-index: 10;
     }
     #header_image {
         padding: 0.25%;
         align-items: center;
         justify-content: center;
-        z-index: 2;
+        z-index: 12;
     }
     #header_menu{
         font-size: large;
@@ -91,7 +91,7 @@
         padding-bottom: 5.5px;
         width: auto;
         justify-content: center;
-        z-index: 2;
+        z-index: 12;
     }
     #header_sidebar {
         display: none;
@@ -103,7 +103,7 @@
         font-family: "Benzin-Regular";
         text-transform: uppercase;
         transition: 0.2s;
-        z-index: 2;
+        z-index: 12;
     }
     #header_buttons:hover {
         font-family: "Benzin-Bold";
@@ -125,7 +125,7 @@
         -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
         width: 100%;
-        z-index: 0;
+        z-index: 10;
     }
     #header_image {
         padding-top: 0.25%;

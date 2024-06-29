@@ -1,0 +1,12 @@
+/* ThreeScene.module.css */
+.webgl {
+    width: 25vw;
+    height: 25vw;
+    position: relative; /* Change from absolute to relative */
+    z-index: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  
+    

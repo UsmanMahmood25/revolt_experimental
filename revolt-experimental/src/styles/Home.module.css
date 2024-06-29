@@ -9,7 +9,7 @@
         align-items: center;
         padding-top: 80px;
         padding-bottom: 4vw;
-        width: 100%;
+        width: 90%;
         
     }
     
@@ -48,10 +48,10 @@
     
     #home_pg_h_img {
         align-items: center;
-        padding-left: 9%;
+        justify-content: center;
         padding-top: 0px;
         padding-right: 10%;
-        width: 50%;
+        overflow: hidden;
     }
     
     #our_work_component {
@@ -107,10 +107,10 @@
     
     #home_pg_h_img {
         align-items: center;
-        padding-left: 9%;
+        justify-content: center;
         padding-top: 0px;
         padding-right: 10%;
-        width: 50%;
+        overflow: hidden;
     }
     
     #our_work_component {
@@ -165,10 +165,10 @@
     
     #home_pg_h_img {
         align-items: center;
-        padding-left: 9%;
+        justify-content: center;
         padding-top: 0px;
         padding-right: 10%;
-        width: 50%;
+        overflow: hidden;
     }
     
     #our_work_component {
