@@ -123,7 +123,7 @@
         align-items: center;
         justify-content: space-between;
         -webkit-backdrop-filter: blur(8px);
-        backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);                 /* Not Supported by FireFox */
         width: 100%;
         z-index: 10;
     }

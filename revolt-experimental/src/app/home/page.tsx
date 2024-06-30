@@ -25,35 +25,24 @@ export default function HomePage() {
             </div>
 
             <div id={home_styles.our_work_component}>
-                <h1 id={home_styles.h1}>Home Page</h1>
+                <div id={home_styles.owc_video}>
+                    <iframe id={home_styles.owc_video_part}
+                        src="https://www.youtube.com/embed/5yor70Px6j4?autoplay=1&mute=1&playlist=5yor70Px6j4&loop=1&controls=0">     
+                    </iframe>
+                </div>
+                <div id={home_styles.owc_content}>
+                    <h1 id={home_styles.h1}>Home Page</h1>
+                    <p id={home_styles.p}> 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea iste aperiam consequatur maiores qui eum vel a. 
+                        Sint quia porro dolore non quas temporibus, incidunt, soluta nam, officiis similique sapiente. Lorem ipsum 
+                        dolor sit amet consectetur adipisicing elit. Molestias quis ipsam vero pariatur, dolor dolore. Cumque deleniti 
+                        iure labore adipisci a sunt culpa error blanditiis, eius voluptatibus voluptatem quibusdam repellat.
+                    </p>
+                </div>
             </div>
 
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
-            <h1 id={home_styles.h1}>Home Page</h1>
+            <hr id={home_styles.hr}></hr>
+
         </main>
     );
 }
