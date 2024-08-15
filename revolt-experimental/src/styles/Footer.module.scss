@@ -17,6 +17,23 @@ Phone Dimensions: Maximum Width: 645px
         flex: 1; /* Allows the image to take up available space */
         display: flex;
         justify-content: flex-start;
+
+        @media screen and (min-width: 925px) {
+            .responsive_image {
+                content: url('/revolt_logo.png');
+            }
+        }
+        @media screen and (max-width: 924px) and (min-width: 646px){
+            .responsive_image {
+                content: url('/revolt_logo.png');
+            }
+        }
+        @media screen and (max-width: 645px){
+            .responsive_image {
+                width: 50px;
+                content: url('/revolt_logo_pic_invert.png');
+            }
+        }
     }
 
     .footer_text {
@@ -27,9 +44,17 @@ Phone Dimensions: Maximum Width: 645px
         align-items: center;
 
         .f_t_1 {
-
-            font-size: 100vw;
             font-family: 'Coolvetica-Regular';
+
+            @media screen and (min-width: 925px) {
+                font-size: 12.5px;
+            }
+            @media screen and (max-width: 924px) and (min-width: 646px){
+                font-size: 12.5px;
+            }
+            @media screen and (max-width: 645px){
+                font-size: 9.5px;
+            }
         }
     }
 
@@ -40,9 +65,19 @@ Phone Dimensions: Maximum Width: 645px
         align-items: center;
 
         .social_icon {
-            width: 30px;
-            height: 30px;
-            margin-left: 15px;
+            @media screen and (min-width: 925px) {
+                width: 30px;
+                height: 30px;
+            }
+            @media screen and (max-width: 924px) and (min-width: 646px){
+                width: 30px;
+                height: 30px;
+            }
+            @media screen and (max-width: 645px){
+                width: 15px;
+                height: 15px;
+            }
+            margin-left: 7.5px;
             cursor: pointer;
             transition: transform 0.3s ease;
 

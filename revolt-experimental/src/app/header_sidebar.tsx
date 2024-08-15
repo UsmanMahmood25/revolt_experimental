@@ -28,7 +28,9 @@ const SidebarComponent: React.FC = () => {
         }
 
         return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
+            if (sidebarVisible && sidebarRef.current) {
+                document.removeEventListener('mousedown', handleClickOutside);
+            }
         };
     }, [sidebarVisible]);
 

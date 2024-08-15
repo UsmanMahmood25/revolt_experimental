@@ -5,39 +5,26 @@ import Image from "next/image";
 import Link from "next/link";
 import header_styles from "@/styles/Header.module.scss";
 import SidebarComponent from "@/app/Header_Sidebar";
-import { useState, useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
-function Header() {
+function Header() {924
 
   const pathname = usePathname();
-  const [isTablet, setIsTablet] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsTablet(window.innerWidth <= 924);
-    };
-
-    window.addEventListener('resize', handleResize);
-    // Initial check
-    handleResize();
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  
     return (
       <header className={header_styles.header}>
         <div className={header_styles.header_tablet_container}>
           <div className={header_styles.header_image}>
             <div className={header_styles.header_main_image}>
-              <Image 
-                src={isTablet ? '/revolt_logo.png' : '/revolt_logo_pic_invert.png'}
-                alt="ReVOLT Logo"
-                width={200}
-                height={50}
-              />
+              
+                <Image 
+                  src='/revolt_logo_pic_invert.png'
+                  alt="ReVOLT Logo"
+                  width={200}
+                  height={50}
+                  className={header_styles.responsive_image}
+                />
+              
             </div>
           </div>
         </div>

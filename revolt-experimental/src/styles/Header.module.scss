@@ -68,6 +68,9 @@ Phone Dimensions: Maximum Width: 645px
                     margin-bottom: 5.5%;
                     width: 8.5vh;
                     z-index: 12;
+                    .responsive_image {
+                        content: url('/revolt_logo_pic_invert.png');
+                    }
                 }
                 @media screen and (max-width: 924px) and (min-width: 646px){
                     margin-top: 2.5%;
@@ -75,10 +78,16 @@ Phone Dimensions: Maximum Width: 645px
                     margin-bottom: 2.5%;
                     width: 25.5vh;
                     z-index: 12;
+                    .responsive_image {
+                        content: url('/revolt_logo.png');
+                    }
                 }
                 @media screen and (max-width: 645px){
                     width: 22.5vh;
                     z-index: 9999;
+                    .responsive_image {
+                        content: url('/revolt_logo.png');
+                    }
                 }
             }
         }

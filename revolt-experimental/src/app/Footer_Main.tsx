@@ -13,6 +13,7 @@ function Footer() {
           alt="ReVOLT Logo"
           width={200}
           height={50}
+          className={footer_styles.responsive_image}
         />
       </div>
 
