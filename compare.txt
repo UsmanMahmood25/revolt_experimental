@@ -1,65 +1,6 @@
-
-/* Laptop Dimensions */
-@media screen and (min-width: 925px) {
-    #header {
-        background-color: rgba(28, 28, 27, 0.5);
-        transition: 0.20s;
-        position: fixed;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        -webkit-backdrop-filter: blur(8px);
-        backdrop-filter: blur(8px);
-        width: 100%;
-        z-index: 10;
-    }
-    #header:hover {
-        background-color: red;
-        opacity: 100%;
-        z-index: 10;
-    }
-    #header_image {
-        padding-top: 0.25%;
-        padding-left: 0.25%;
-        padding-bottom: 0.25%;
-        z-index: 12;
-    }
-    #header_menu{
-        font-size: large;
-        display: flex;
-        flex-direction: row;
-        padding-top: 17.5px;
-        width: auto;
-        justify-content: center;
-        z-index: 12;
-        margin-left: -50px; 
-        flex: 1;
-    }
-    #header_sidebar {
-        display: none;
-    }
-    #header_buttons {
-        padding-left: 2.5%;
-        padding-right: 2.5%;
-        font-size: large;
-        font-family: "Benzin-Regular";
-        text-transform: uppercase;
-        transition: 0.2s;
-        z-index: 12;
-    }
-    #header_buttons:hover {
-        font-family: "Benzin-Bold";
-        transform: scale(1.1);
-    }
-}
-
-
-/* Tablet Dimensions */
 @media screen and (max-width: 924px) and (min-width: 646px) {
     #header {
-        background-color: rgba(28, 28, 27, 0.5);
+        background-color: rgba(28, 28, 27, 0.75);
         transition: 0.20s;
         position: fixed;
         display: flex;
@@ -67,8 +8,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        -webkit-backdrop-filter: blur(8px);
-        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8.5px);
+        backdrop-filter: blur(8.5px);
         width: 100%;
         z-index: 10;
     }
@@ -111,10 +52,9 @@
     }
 }
 
-/* Phone Dimensions */
 @media screen and (max-width: 645px) {
     #header {
-        background-color: rgba(28, 28, 27, 0.5);
+        background-color: rgba(28, 28, 27, 0.75);
         transition: 0.20s;
         position: fixed;
         display: flex;
@@ -122,8 +62,8 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        -webkit-backdrop-filter: blur(8px);
-        backdrop-filter: blur(8px);                 /* Not Supported by FireFox */
+        -webkit-backdrop-filter: blur(8.5px);
+        backdrop-filter: blur(8.5px);                 /* Not Supported by FireFox */
         width: 100%;
         z-index: 10;
     }
@@ -204,17 +144,3 @@
         transform: scale(1.1);
     }
 }
-
-#sidebar_button {
-    display: none;
-}
-
-@font-face {
-    font-family: "Benzin-Regular";
-    src: url("font_styles_title/Benzin-Regular.ttf");
-}
-@font-face {
-    font-family: "Benzin-Bold";
-    src: url("font_styles_title/Benzin-Bold.ttf");
-}
-

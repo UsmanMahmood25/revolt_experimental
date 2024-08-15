@@ -1,7 +1,5 @@
 
-
 import HomePage from "./home/page";
-import { Header } from "./layout";
 export default function Home() {
     return (
         <main>

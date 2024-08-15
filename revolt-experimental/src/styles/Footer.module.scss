@@ -1,0 +1,68 @@
+/* 
+-----------------------------------------------------------------
+Laptop Dimensions: Minimum Width: 925px
+Tablet Dimensions: Minimum Width: 646px, Maximum Width: 924px
+Phone Dimensions: Maximum Width: 645px 
+-----------------------------------------------------------------
+*/
+
+.footer {
+    display: flex;
+    justify-content: space-between; /* Distributes the space evenly between the children */
+    align-items: center; /* Vertically centers the content */
+    background-color: rgba(28, 28, 27, 1);
+    padding: 1%;
+
+    .footer_image {
+        flex: 1; /* Allows the image to take up available space */
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .footer_text {
+        flex: 2; /* Takes up more space so the text is centered */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .f_t_1 {
+
+            font-size: 100vw;
+            font-family: 'Coolvetica-Regular';
+        }
+    }
+
+    .footer_socials {
+        flex: 1; /* Allows the socials to take up available space */
+        display: flex;
+        justify-content: flex-end; /* Aligns the content to the right */
+        align-items: center;
+
+        .social_icon {
+            width: 30px;
+            height: 30px;
+            margin-left: 15px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+    }
+}
+
+
+@font-face {
+    font-family: "Benzin-Regular";
+    src: url("font_styles_title/Benzin-Regular.ttf");
+}
+@font-face {
+    font-family: "Benzin-Bold";
+    src: url("font_styles_title/Benzin-Bold.ttf");
+}
+@font-face {
+    font-family: "Coolvetica-Regular";
+    src: url("font_styles_title/coolvetica\ rg.otf");
+}
