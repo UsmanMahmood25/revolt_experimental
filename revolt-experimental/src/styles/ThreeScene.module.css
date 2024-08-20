@@ -1,12 +1,23 @@
 /* ThreeScene.module.css */
+
+.parent-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns the container to the right */
+  width: 100%;
+}
+
+.container {
+  width: 22.5vw;
+  height: 25vw;
+  background-color: transparent;
+  overflow: hidden;
+}
+
 .webgl {
-    width: 25vw;
-    height: 25vw;
-    position: relative; /* Change from absolute to relative */
-    z-index: 0;
-    display: block;
-    justify-content: center;
-    align-items: center;
-  }
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: transparent;
+}
   
     

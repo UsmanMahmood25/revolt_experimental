@@ -103,14 +103,14 @@ Phone Dimensions: Maximum Width: 645px
         z-index: 12;
 
         @media screen and (min-width: 925px) {
-        padding-top: 1vh;
+            padding-top: 1vh;
         }
         @media screen and (max-width: 924px) and (min-width: 646px) {
-        padding-top: 1.5px;
-        padding-bottom: 10px;
+            padding-top: 1.5px;
+            padding-bottom: 10px;
         }
         @media screen and (max-width: 645px) {
-        display: none;
+            display: none;
         }
 
         .header_buttons {

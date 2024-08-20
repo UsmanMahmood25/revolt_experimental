@@ -1,0 +1,137 @@
+
+/* 
+-----------------------------------------------------------------
+Laptop Dimensions: Minimum Width: 925px
+Tablet Dimensions: Minimum Width: 646px, Maximum Width: 924px
+Phone Dimensions: Maximum Width: 645px 
+-----------------------------------------------------------------
+*/
+
+.home_pg_header {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: black;
+    width: auto;
+
+    @media screen and (min-width: 925px) {
+        padding-top: 120px;
+        margin-bottom: 170px;
+    }
+    @media screen and (max-width: 924px) and (min-width: 646px) {
+        padding-top: 140px;
+        margin-bottom: 115px;
+    }
+    @media screen and (max-width: 645px) {
+        padding-top: 100px;
+        margin-bottom: 120px;
+    }
+
+    .bike_model {
+        width: 43.5%;
+        flex: 1;
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        z-index: 9;
+    }
+
+    .h_pg_h_text {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin-top: 5.5vw;
+        margin-left: 42.5vw;
+        margin-right: 10.25vw;
+        width: 65%;
+        z-index: 8;
+
+        .reg_text_1 {
+            text-align: left;
+            width: 100%;
+            z-index: 7;        
+
+            .reg_text_1_1 {
+                font-size: 2.125vw;
+                font-family: 'Benzin-Regular';
+            }
+        }
+
+        .reg_text_2 {
+            text-align: right;
+            width: auto;
+            z-index: 7;
+
+            .reg_text_2_1 {
+                font-size: 2.125vw;
+                font-family: 'Benzin-Regular';
+            }
+        }
+
+        .large_text {
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+            margin-top: -3vw;
+            margin-bottom: -2.5vw;
+            z-index: 6;
+
+            .large_text_1 {
+                font-size: 9vw;
+                font-family: 'Benzin-Regular';
+                transition: transform 0.3s ease, font-family 0.3s ease;
+
+                &.large_text_1:hover {
+                    font-size: 9vw;
+                    font-family: 'Benzin-Bold';
+                    transform: scale(1); /* Add a slight scale effect */
+                }
+            }
+        }
+    }
+}
+
+.who_we_are {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-bottom: 100px;
+    background-color: rgba(28, 28, 27, 1);
+    width: auto;
+
+    .wwa_header {
+        transform: translateY(-2.0vw);
+
+        .wwa_h_text {
+            padding-left: 10vw;
+            font-size: 2.75vw;
+            font-family: 'Benzin-Bold';
+        }
+    }
+}
+
+.what_we_do {
+
+}
+
+.planned_comp {
+
+}
+
+.sponsors {
+
+}
+
+@font-face {
+    font-family: "Benzin-Regular";
+    src: url("font_styles_title/Benzin-Regular.ttf");
+}
+@font-face {
+    font-family: "Benzin-Bold";
+    src: url("font_styles_title/Benzin-Bold.ttf");
+}
+@font-face {
+    font-family: "Coolvetica-Regular";
+    src: url("font_styles_title/coolvetica\ rg.otf");
+}
