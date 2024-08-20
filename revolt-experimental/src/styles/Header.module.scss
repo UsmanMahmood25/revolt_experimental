@@ -7,6 +7,11 @@ Phone Dimensions: Maximum Width: 645px
 -----------------------------------------------------------------
 */
 
+/*
+Notes:
+    - Header Height: 91.984px
+*/
+
 .header {
     background-color: rgba(28, 28, 27, 0.75);
     transition: 0.20s;
@@ -48,6 +53,7 @@ Phone Dimensions: Maximum Width: 645px
         }
     }
     @media screen and (max-width: 645px){
+        height: 50px;
         flex-direction: row;
         justify-content: space-between;
     }
@@ -63,10 +69,10 @@ Phone Dimensions: Maximum Width: 645px
             .header_main_image {
                 
                 @media screen and (min-width: 925px) {
-                    margin-top: 5.5%;
-                    margin-left: 5.5%;
+                    margin-top: 9.5%;
+                    margin-left: 9.5%;
                     margin-bottom: 5.5%;
-                    width: 8.5vh;
+                    width: 80px;                   //4.5vw
                     z-index: 12;
                     .responsive_image {
                         content: url('/revolt_logo_pic_invert.png');
@@ -74,7 +80,7 @@ Phone Dimensions: Maximum Width: 645px
                 }
                 @media screen and (max-width: 924px) and (min-width: 646px){
                     margin-top: 2.5%;
-                    margin-left: 2.5%;
+                    margin-left: 18.5%;
                     margin-bottom: 2.5%;
                     width: 25.5vh;
                     z-index: 12;
@@ -83,6 +89,7 @@ Phone Dimensions: Maximum Width: 645px
                     }
                 }
                 @media screen and (max-width: 645px){
+                    margin-top: 2%;
                     width: 22.5vh;
                     z-index: 9999;
                     .responsive_image {
@@ -100,6 +107,7 @@ Phone Dimensions: Maximum Width: 645px
         align-items: center;
         justify-content: center; /* Center buttons horizontally */
         width: auto; /* Fit content width */
+        margin-left: 7.0vw;
         z-index: 12;
 
         @media screen and (min-width: 925px) {

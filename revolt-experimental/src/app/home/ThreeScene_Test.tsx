@@ -18,14 +18,14 @@ const ThreeScene = () => {
         // GLTF Model setup
         const loader = new GLTFLoader();
         loader.load('/assets/honda_shadow_rs_2010/scene.gltf', (gltf) => {
-        const model = gltf.scene;
-        model.scale.set(2, 2, 2); // Scale the model
-        scene.add(model);
+            const model = gltf.scene;
+            model.scale.set(2, 2, 2); // Scale the model
+            scene.add(model);
 
-        // GSAP animations for the model
-        const tl = gsap.timeline({ defaults: { duration: 1 } });
-        tl.fromTo(model.scale, { z: 0, x: 0, y: 0 }, { z: 2, x: 2, y: 2 });
-    });
+            // GSAP animations for the model
+            const tl = gsap.timeline({ defaults: { duration: 1 } });
+            tl.fromTo(model.scale, { z: 0, x: 0, y: 0 }, { z: 2, x: 2, y: 2 });
+        });
 
         // Light setup
         const light = new THREE.PointLight(0xffffff, 100, 100);

@@ -11,7 +11,9 @@ Phone Dimensions: Maximum Width: 645px
     justify-content: space-between; /* Distributes the space evenly between the children */
     align-items: center; /* Vertically centers the content */
     background-color: rgba(28, 28, 27, 1);
-    padding: 1%;
+    height: 92px;
+    padding-left: 2%;
+    padding-right: 2%;
 
     .footer_image {
         flex: 1; /* Allows the image to take up available space */
@@ -21,9 +23,11 @@ Phone Dimensions: Maximum Width: 645px
         @media screen and (min-width: 925px) {
             .responsive_image {
                 content: url('/revolt_logo.png');
+                width: 215.5px;
             }
         }
         @media screen and (max-width: 924px) and (min-width: 646px){
+            width: 5.5vw;
             .responsive_image {
                 content: url('/revolt_logo.png');
             }
@@ -47,13 +51,13 @@ Phone Dimensions: Maximum Width: 645px
             font-family: 'Coolvetica-Regular';
 
             @media screen and (min-width: 925px) {
-                font-size: 12.5px;
+                font-size: 15.5px;
             }
             @media screen and (max-width: 924px) and (min-width: 646px){
-                font-size: 12.5px;
+                font-size: 15.5px;
             }
             @media screen and (max-width: 645px){
-                font-size: 9.5px;
+                font-size: 11.5px;
             }
         }
     }
