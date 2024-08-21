@@ -9,7 +9,7 @@ Phone Dimensions: Maximum Width: 645px
 
 /*
 Notes:
-    - Header Height: 91.984px
+    - Header Height: 80px
 */
 
 .header {
@@ -22,7 +22,7 @@ Notes:
     -webkit-backdrop-filter: blur(8.5px);
     backdrop-filter: blur(8.5px);
     width: 100%;
-    z-index: 10;
+    z-index: 150;
 
     @media screen and (min-width: 925px) {
         flex-direction: row;
@@ -31,7 +31,7 @@ Notes:
         &.header:hover {
             background-color: red;
             opacity: 100%;
-            z-index: 10;
+            z-index: 150;
 
             .header_menu .header_buttons.active {
                 color: red; /* Active link text matches original header color */
@@ -45,7 +45,7 @@ Notes:
         &.header:hover {
             background-color: red;
             opacity: 100%;
-            z-index: 10;
+            z-index: 150;
 
             .header_menu .header_buttons.active {
                 color: red; /* Active link text matches original header color */
@@ -69,10 +69,10 @@ Notes:
             .header_main_image {
                 
                 @media screen and (min-width: 925px) {
-                    margin-top: 9.5%;
-                    margin-left: 9.5%;
+                    margin-top: 18.5%;
+                    margin-left: 35.5%;
                     margin-bottom: 5.5%;
-                    width: 80px;                   //4.5vw
+                    width: 50px;                   //4.5vw
                     z-index: 12;
                     .responsive_image {
                         content: url('/revolt_logo_pic_invert.png');

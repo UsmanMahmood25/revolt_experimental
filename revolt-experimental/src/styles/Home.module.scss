@@ -15,8 +15,8 @@ Phone Dimensions: Maximum Width: 645px
     width: auto;
 
     @media screen and (min-width: 925px) {
-        padding-top: 120px;
-        margin-bottom: 170px;
+        padding-top: 8.5vw;
+        margin-bottom: 10vw;
     }
     @media screen and (max-width: 924px) and (min-width: 646px) {
         padding-top: 140px;
@@ -85,7 +85,7 @@ Phone Dimensions: Maximum Width: 645px
                 &.large_text_1:hover {
                     font-size: 9vw;
                     font-family: 'Benzin-Bold';
-                    transform: scale(1); /* Add a slight scale effect */
+                    transform: scale(1.01); /* Add a slight scale effect */
                 }
             }
         }
@@ -94,9 +94,8 @@ Phone Dimensions: Maximum Width: 645px
 
 .who_we_are {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     position: relative;
-    margin-bottom: 100px;
     background-color: rgba(28, 28, 27, 1);
     width: auto;
 
@@ -109,10 +108,108 @@ Phone Dimensions: Maximum Width: 645px
             font-family: 'Benzin-Bold';
         }
     }
+
+    .wwa_content {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        transform: translateY(-2vw);
+
+        @media screen and (min-width: 925px) {
+            flex-direction: row;
+        }
+        @media screen and (max-width: 924px) and (min-width: 646px) {
+            flex-direction: column;
+        }
+        @media screen and (max-width: 645px) {
+            flex-direction: column;
+        }
+
+        .wwa_c_text {
+
+            ////////////////////////////////
+            // Adjust Font size for later //
+            ////////////////////////////////
+
+            @media screen and (min-width: 925px) {
+                width: 50%;
+                padding-left: 2vw;
+            }
+            @media screen and (max-width: 924px) and (min-width: 646px) {
+                width: 100%;
+                padding: 2vw;
+            }
+            @media screen and (max-width: 645px) {
+                width: 100%;
+                padding: 2vw;
+            }
+
+            .wwa_c_list{
+                display: flex;
+                
+                @media screen and (min-width: 925px) {
+                    flex-direction: column;
+                }
+                @media screen and (max-width: 924px) and (min-width: 646px) {
+                    flex-direction: row;
+                }
+                @media screen and (max-width: 645px) {
+                    flex-direction: row;
+                }
+
+                .wwa_c_l_style {
+                    padding: 2vw;
+
+                    .wwa_c_t_style {
+                        font-family: 'Coolvetica-Regular';
+
+                        @media screen and (min-width: 925px) {
+                            font-size: 1vw;
+                        }
+                        @media screen and (max-width: 924px) and (min-width: 646px) {
+                            font-size: 2vw;
+                        }
+                        @media screen and (max-width: 645px) {
+                            font-size: 2.5vw;
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        .wwa_c_video {
+            display: flex;
+
+            @media screen and (min-width: 925px) {
+                width: 50%;
+                justify-content: center;
+                align-items: center;
+            }
+            @media screen and (max-width: 924px) and (min-width: 646px) {
+                justify-content: center;
+                align-items: center;
+            }
+            @media screen and (max-width: 645px) {
+                justify-content: center;
+                align-items: center;
+            }
+
+            .wwa_c_v_part {
+                width: 45vw;
+                height: 25vw;
+                
+            }
+        }
+
+    }
+
+
 }
 
 .what_we_do {
-
+    display: flex;
+    flex-direction: row;
 }
 
 .planned_comp {

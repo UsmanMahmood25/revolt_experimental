@@ -40,7 +40,7 @@ const ThreeScene = () => {
         const { clientWidth: width, clientHeight: height } = container;
         const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
         camera.position.z = 8.65;
-        camera.position.y = 4;
+        camera.position.y = 5.5;
         scene.add(camera);
 
         // Renderer setup
@@ -59,8 +59,8 @@ const ThreeScene = () => {
         controls.update();
 
         // Lock rotation to the X-axis only
-        controls.minPolarAngle = Math.PI / 2; // Prevent camera from moving below the X-axis
-        controls.maxPolarAngle = Math.PI / 2; // Prevent camera from moving above the X-axis
+        controls.minPolarAngle = Math.PI / 2.5; // Prevent camera from moving below the X-axis
+        controls.maxPolarAngle = Math.PI / 2.5; // Prevent camera from moving above the X-axis
 
         // Handle window resize
         const handleResize = () => {
