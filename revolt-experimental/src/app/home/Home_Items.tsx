@@ -9,11 +9,54 @@ import ThreeSceneTest from "./ThreeScene_Test";
 import { useState, useEffect } from "react";
 
 const WhatWeDo = () => {
-    const [activeChoice, setActiveChoice] = useState('');
 
-    const whatWeDoInfo = {
-        
+    const [activeChoice, setActiveChoice] = useState<InfoContent | ''>("");
+    type InfoContent = 'RESTORE' | 'INNOVATE' | 'MODERNIZE';
+
+    const whatWeDoInfo: Record<InfoContent, string[]> = {
+        "RESTORE" : [
+            "Text 1, Holy Molly Dude Text 1, Holy Molly Dude Text 1, Holy Molly Dude Text 1, Holy Molly Dude Text 1, Holy Molly Dude",
+            "Text 1, Holy Molly Dude Text 1, Holy Molly Dude Text 1, Holy Molly Dude Text 1, Holy Molly Dude Text 1, Holy Molly Dude",
+            "Text 1, Holy Molly Dude Text 1, Holy Molly Dude Text 1, Holy Molly Dude Text 1, Holy Molly Dude Text 1, Holy Molly Dude",
+        ],
+
+        "INNOVATE" : [
+            "Text 2, Awesome Dude Text 2, Awesome Dude Text 2, Awesome Dude Text 2, Awesome Dude Text 2, Awesome Dude",
+            "Text 2, Awesome Dude Text 2, Awesome Dude Text 2, Awesome Dude Text 2, Awesome Dude Text 2, Awesome Dude",
+            "Text 2, Awesome Dude Text 2, Awesome Dude Text 2, Awesome Dude Text 2, Awesome Dude Text 2, Awesome Dude",
+        ],
+
+        "MODERNIZE" : [
+            "Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang",
+            "Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang",
+            "Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang",
+        ]
     }
+    
+    return (
+        <div className={home_style.wwd_c_main}>
+            <div className={home_style.wwd_c_m_buttons}>
+                {Object.keys(whatWeDoInfo).map(info => (
+                    <div className={home_style.wwd_c_m_b_type} key={info}>
+                        <button className={home_style.wwd_c_m_b_t_style} onClick={() => setActiveChoice(info as InfoContent)}>
+                            {info}
+                        </button>
+                    </div>
+                ))}
+            </div>  
+            <div className={home_style.wwd_c_m_info}>
+                {activeChoice ? (
+                    <ul>
+                        {whatWeDoInfo[activeChoice].map((infoChoice, index) => (
+                            <li className={home_style.wwd_c_m_i_style}key={index}>{infoChoice}</li>
+                        ))}
+                    </ul>
+                ) : (
+                    <p>Select one of the 3 option to see more details</p>
+                )}
+            </div>
+        </div>
+    );
 }
 
 export default function HomePageItem() {
@@ -82,10 +125,7 @@ export default function HomePageItem() {
                     </p>
                 </div>
                 <div className={home_style.wwd_content}>
-
-                </div>
-                <div className={home_style.wwd_pictures}>
-
+                    <WhatWeDo />
                 </div>
             </div>
 
@@ -95,40 +135,6 @@ export default function HomePageItem() {
 
             <div className={home_style.sponsors}>
 
-            </div>
-
-
-
-
-
-            <div id={home_styles2.home_pg_header}>
-                <div id={home_styles2.home_pg_h_text}>
-                    <Link id={home_styles2.home_pg_h_button} href="/projects#specific_section">Restore</Link>
-                    <Link id={home_styles2.home_pg_h_button} href="/team">Innovate</Link>
-                    <Link id={home_styles2.home_pg_h_button} href="/timeline">Modernize</Link>
-                </div>
-                <div id={home_styles2.home_pg_h_img}>
-                    <div>
-                        <ThreeScene />
-                    </div>
-                </div>
-            </div>
-
-            <div id={home_styles2.our_work_component}>
-                <div id={home_styles2.owc_video}>
-                    <iframe id={home_styles2.owc_video_part}
-                        src="https://www.youtube.com/embed/5yor70Px6j4?autoplay=1&mute=1&playlist=5yor70Px6j4&loop=1&controls=0">     
-                    </iframe>
-                </div>
-                <div id={home_styles2.owc_content}>
-                    <h1 id={home_styles2.h1}>Home Page</h1>
-                    <p id={home_styles2.p}> 
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea iste aperiam consequatur maiores qui eum vel a. 
-                        Sint quia porro dolore non quas temporibus, incidunt, soluta nam, officiis similique sapiente. Lorem ipsum 
-                        dolor sit amet consectetur adipisicing elit. Molestias quis ipsam vero pariatur, dolor dolore. Cumque deleniti 
-                        iure labore adipisci a sunt culpa error blanditiis, eius voluptatibus voluptatem quibusdam repellat.
-                    </p>
-                </div>
             </div>
 
             <hr id={home_styles2.hr}></hr>
