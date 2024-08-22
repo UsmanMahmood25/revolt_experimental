@@ -96,7 +96,7 @@ Phone Dimensions: Maximum Width: 645px
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: rgba(28, 28, 27, 1);
+    background: linear-gradient(to right, rgb(18,18,18) , rgb(33,33,33));
     width: auto;
 
     .wwa_header {
@@ -211,31 +211,6 @@ Phone Dimensions: Maximum Width: 645px
     display: flex;
     flex-direction: column;
 
-    .wwd_text {
-        display: flex;
-        
-
-        @media screen and (min-width: 925px) {
-            padding-top: 6.5vw;
-            padding-left: 33.75vw;
-        }
-        @media screen and (max-width: 924px) and (min-width: 646px) {
-            padding-top: 2vw;
-            padding-bottom: 1vw;
-            justify-content: center;
-        }
-        @media screen and (max-width: 645px) {
-            padding-top: 2vw;
-            padding-bottom: 1vw;
-            justify-content: center;
-        }
-
-        .wwd_t_style {
-            font-size: 2.25vw;
-            font-family: 'Benzin-Bold';
-        }
-    }
-
     .wdd_content {
         display: flex
     }
@@ -253,65 +228,109 @@ Phone Dimensions: Maximum Width: 645px
         flex-direction: column;
     }
 
-    .wwd_c_m_buttons {
+    .wwd_c_m {
         display: flex;
-        font-family: "Benzin-Bold";
-        padding-top: 1.5vw;
-        transition: 0.5s;
-
-        &.wwd_c_m_buttons:hover {
-            font-family: "Benzin-Regular";
-            transition: 1.5s;
-        }
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 1.5vw;
 
         @media screen and (min-width: 925px) {
-            width: 55%;
-            flex-direction: column;
-            align-items: end;
+            padding-bottom: 1.5vw;
         }
         @media screen and (max-width: 924px) and (min-width: 646px) {
-            width: 100%;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
+            padding-top: 4.5vw;
+            padding-bottom: 2.5vw;
         }
         @media screen and (max-width: 645px) {
-            width: 100%;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
+            padding-top: 4.5vw;
+            padding-bottom: 2.5vw;
         }
 
-        .wwd_c_m_b_type {
-            margin-top: -3vw;
-            transition: 0.5s;
-
+        .wwd_text {
+            display: flex;
+            
             @media screen and (min-width: 925px) {
-                font-size: 6.5vw;
-                padding: 0;
+                padding-top: 6.5vw;
+                padding-left: 33.75vw;
             }
             @media screen and (max-width: 924px) and (min-width: 646px) {
-                font-size: 4vw;
-                padding: 1vw;
-                
+                padding-top: 2vw;
+                padding-bottom: 1vw;
+                justify-content: center;
             }
             @media screen and (max-width: 645px) {
-                font-size: 4vw;
-                padding: 1vw;
+                padding-top: 2vw;
+                padding-bottom: 1vw;
+                justify-content: center;
             }
-
-            &.wwd_c_m_b_type:hover {
-                font-family: "Benzin-Bold";
-                color: red;
-                transform: scale(1.01);
+    
+            .wwd_t_style {
+                font-size: 2.25vw;
+                font-family: 'Benzin-Bold';
             }
-            
         }
+
+        .wwd_c_m_buttons {
+            display: flex;
+            font-family: "Benzin-Bold";
+            padding-top: 1.5vw;
+            transition: 0.5s;
+    
+            &.wwd_c_m_buttons:hover {
+                font-family: "Benzin-Regular";
+                transition: 1.5s;
+            }
+    
+            @media screen and (min-width: 925px) {
+                width: 100%;
+                flex-direction: column;
+                align-items: end;
+            }
+            @media screen and (max-width: 924px) and (min-width: 646px) {
+                width: 100%;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+            @media screen and (max-width: 645px) {
+                width: 100%;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            .wwd_c_m_b_type {
+                margin-top: -3.5vw;
+                transition: 0.5s;
+    
+                @media screen and (min-width: 925px) {
+                    font-size: 6.5vw;
+                    padding: 0;
+                }
+                @media screen and (max-width: 924px) and (min-width: 646px) {
+                    font-size: 4vw;
+                    padding: 1vw;
+                    
+                }
+                @media screen and (max-width: 645px) {
+                    font-size: 4vw;
+                    padding: 1vw;
+                }
+    
+                &.wwd_c_m_b_type:hover {
+                    font-family: "Benzin-Bold";
+                    color: red;
+                    transform: scale(1.01);
+                }
+                
+            }
+        }
+
     }
+    
 
     .wwd_c_m_info {
         display: flex;
-        padding-bottom: 2vw;
         justify-content: center;
         align-items: center;
         font-family: 'Coolvetica-Regular';
@@ -322,23 +341,28 @@ Phone Dimensions: Maximum Width: 645px
             font-size: 1.5vw;
             padding-left: 2vw;
             padding-right: 2vw;
+            padding-top: 4.5vw;
         }
         @media screen and (max-width: 924px) and (min-width: 646px) {
             width: 100%;
             font-size: 2.5vw;
-            padding-left: 5.5vw;
+            padding-left: 6.0vw;
             padding-right: 4.5vw;
         }
         @media screen and (max-width: 645px) {
             width: 100%;
             font-size: 2.5vw;
-            padding-left: 5.5vw;
+            padding-left: 6.5vw;
             padding-right: 4.5vw;
         }
 
         .wwd_c_m_i_style {
-            padding-top: 1vw;
-            padding-bottom: 1vw;
+            padding: 1vw;
+        }
+
+        .temp_text {
+            font-family: "Coolvetica-Regular";
+            font-size: 1.5vw;
         }
 
     }

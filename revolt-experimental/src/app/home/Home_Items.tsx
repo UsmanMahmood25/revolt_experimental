@@ -29,21 +29,28 @@ const WhatWeDo = () => {
         "MODERNIZE" : [
             "Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang",
             "Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang",
-            "Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang",
+            "Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang",               
         ]
     }
     
     return (
         <div className={home_style.wwd_c_main}>
-            <div className={home_style.wwd_c_m_buttons}>
-                {Object.keys(whatWeDoInfo).map(info => (
-                    <div className={home_style.wwd_c_m_b_type} key={info}>
-                        <button className={home_style.wwd_c_m_b_t_style} onClick={() => setActiveChoice(info as InfoContent)}>
-                            {info}
-                        </button>
-                    </div>
-                ))}
-            </div>  
+            <div className={home_style.wwd_c_m}>
+                <div className={home_style.wwd_text}>
+                    <p className={home_style.wwd_t_style}>
+                        WHAT WE DO
+                    </p>
+                </div>
+                <div className={home_style.wwd_c_m_buttons}>
+                    {Object.keys(whatWeDoInfo).map(info => (
+                        <div className={home_style.wwd_c_m_b_type} key={info}>
+                            <button className={home_style.wwd_c_m_b_t_style} onClick={() => setActiveChoice(info as InfoContent)}>
+                                {info}
+                            </button>
+                        </div>
+                    ))}
+                </div>  
+            </div>
             <div className={home_style.wwd_c_m_info}>
                 {activeChoice ? (
                     <ul>
@@ -52,7 +59,7 @@ const WhatWeDo = () => {
                         ))}
                     </ul>
                 ) : (
-                    <p>Select one of the 3 option to see more details</p>
+                    <p className={home_style.temp_text}>Select one of the 3 option to see more details</p>
                 )}
             </div>
         </div>
@@ -119,11 +126,6 @@ export default function HomePageItem() {
             </div>
 
             <div className={home_style.what_we_do}>
-                <div className={home_style.wwd_text}>
-                    <p className={home_style.wwd_t_style}>
-                        WHAT WE DO
-                    </p>
-                </div>
                 <div className={home_style.wwd_content}>
                     <WhatWeDo />
                 </div>
