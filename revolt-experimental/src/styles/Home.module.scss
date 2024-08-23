@@ -365,6 +365,30 @@ Phone Dimensions: Maximum Width: 645px
             font-size: 1.5vw;
         }
 
+        .text_enter {
+            opacity: 0;
+            transform: translateY(10%);
+            transition-delay: 200ms; /* Delay before the entering transition starts */
+        }
+        
+        .text_enter_active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
+        }
+        
+        .text_exit {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .text_exit_active {
+            opacity: 0;
+            transform: translateY(-10%);
+            transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
+            transition-delay: 200ms; /* Delay before the entering transition starts */
+        }
+
     }
 }
 

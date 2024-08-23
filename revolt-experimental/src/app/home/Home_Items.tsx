@@ -3,12 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from 'react';
-
+import Slider from 'react-slick';
+import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import home_styles2 from "@/styles/Home.module.css";
 import home_style from "@/styles/Home.module.scss";
 import ThreeScene from "./ThreeScene";
 import ThreeSceneTest from "./ThreeScene_Test";
 import { useState, useEffect } from "react";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const WhatWeDo = () => {
 
@@ -54,17 +57,64 @@ const WhatWeDo = () => {
                 </div>  
             </div>
             <div className={home_style.wwd_c_m_info}>
-                {activeChoice ? (
-                    <ul>
-                        {whatWeDoInfo[activeChoice].map((infoChoice, index) => (
-                            <li className={home_style.wwd_c_m_i_style}key={index}>{infoChoice}</li>
-                        ))}
-                    </ul>
-                ) : (
-                    <p className={home_style.temp_text}>Select one of the 3 option to see more details</p>
-                )}
+                <SwitchTransition mode="out-in">
+                    <CSSTransition
+                        key={activeChoice}
+                        addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
+                        classNames={{
+                            enter: home_style.text_enter,
+                            enterActive: home_style.text_enter_active,
+                            exit: home_style.text_exit,
+                            exitActive: home_style.text_exit_active,
+                        }}
+                    >
+                        <div>
+                            {activeChoice ? (
+                                <ul>
+                                    {whatWeDoInfo[activeChoice].map((infoChoice, index) => (
+                                        <li className={home_style.wwd_c_m_i_style} key={index}>{infoChoice}</li>
+                                    ))}
+                                </ul>
+                            ) : (
+                                <p className={home_style.temp_text}>Select one of the 3 options to see more details</p>
+                            )}
+                        </div>
+                    </CSSTransition>
+                </SwitchTransition>
             </div>
         </div>
+    );
+}
+
+interface PicSliderProps {
+    images: string[];
+}
+const PictureSlider: React.FC<PicSliderProps> = ({ images }) => {
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 750,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 924,
+                settings : {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 645,
+                settings : {
+                    slidesToShow: 1,
+                },
+            },
+        ],
+    };
+
+    return (
+        <p> Text </p>
     );
 }
 
