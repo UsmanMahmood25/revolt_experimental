@@ -161,7 +161,7 @@ Phone Dimensions: Maximum Width: 645px
                     padding: 2vw;
 
                     .wwa_c_t_style {
-                        font-family: 'Coolvetica-Regular';
+                        font-family: 'Helvetica-Regular';
 
                         @media screen and (min-width: 925px) {
                             font-size: 1vw;
@@ -333,7 +333,7 @@ Phone Dimensions: Maximum Width: 645px
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: 'Coolvetica-Regular';
+        font-family: 'Helvetica-Regular';
         list-style: none;
 
         @media screen and (min-width: 925px) {
@@ -341,7 +341,7 @@ Phone Dimensions: Maximum Width: 645px
             font-size: 1.5vw;
             padding-left: 2vw;
             padding-right: 2vw;
-            padding-top: 4.5vw;
+            padding-top: 4.0vw;
         }
         @media screen and (max-width: 924px) and (min-width: 646px) {
             width: 100%;
@@ -361,7 +361,7 @@ Phone Dimensions: Maximum Width: 645px
         }
 
         .temp_text {
-            font-family: "Coolvetica-Regular";
+            font-family: "Helvetica-Regular";
             font-size: 1.5vw;
         }
 
@@ -387,4 +387,8 @@ Phone Dimensions: Maximum Width: 645px
 @font-face {
     font-family: "Coolvetica-Regular";
     src: url("font_styles_title/coolvetica\ rg.otf");
+}
+@font-face {
+    font-family: "Helvetica-Regular";
+    src: url("font_styles_title/Helvetica.ttf");
 }

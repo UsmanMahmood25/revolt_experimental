@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import React from 'react';
+
 import home_styles2 from "@/styles/Home.module.css";
 import home_style from "@/styles/Home.module.scss";
 import ThreeScene from "./ThreeScene";
