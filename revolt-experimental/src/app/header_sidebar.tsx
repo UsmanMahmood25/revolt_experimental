@@ -55,10 +55,9 @@ const SidebarComponent: React.FC = () => {
             )}
             <div className={`${header_styles.sidebar} ${sidebarVisible ? header_styles.visible : header_styles.hidden}`}>
                 <Link href="/" className={header_styles.header_buttons} onClick={hideSidebar}>Home</Link>
-                <Link href="/projects" className={header_styles.header_buttons} onClick={hideSidebar}>Projects</Link>
-                <Link href="/timeline" className={header_styles.header_buttons} onClick={hideSidebar}>Timeline</Link>
-                <Link href="/sponsors" className={header_styles.header_buttons} onClick={hideSidebar}>Sponsors</Link>
                 <Link href="/team" className={header_styles.header_buttons} onClick={hideSidebar}>Team</Link>
+                <Link href="/vehicles" className={header_styles.header_buttons} onClick={hideSidebar}>Vehicles</Link>
+                <Link href="/sponsors" className={header_styles.header_buttons} onClick={hideSidebar}>Sponsor Us</Link>
                 
                 <div className={header_styles.sidebar_socials}>
                     <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className={header_styles.social_icon}>
