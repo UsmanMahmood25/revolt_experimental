@@ -214,6 +214,10 @@ Phone Dimensions: Maximum Width: 645px
     .wdd_content {
         display: flex
     }
+
+    .wdd_pictures {
+        display: flex
+    }
 }
 .wwd_c_main {
     display: flex;
@@ -251,16 +255,16 @@ Phone Dimensions: Maximum Width: 645px
             
             @media screen and (min-width: 925px) {
                 padding-top: 6.5vw;
-                padding-left: 33.75vw;
+                padding-left: 33.25vw;
             }
             @media screen and (max-width: 924px) and (min-width: 646px) {
                 padding-top: 2vw;
-                padding-bottom: 1vw;
+                padding-bottom: 2vw;
                 justify-content: center;
             }
             @media screen and (max-width: 645px) {
                 padding-top: 2vw;
-                padding-bottom: 1vw;
+                padding-bottom: 2vw;
                 justify-content: center;
             }
     
@@ -363,6 +367,16 @@ Phone Dimensions: Maximum Width: 645px
         .temp_text {
             font-family: "Helvetica-Regular";
             font-size: 1.5vw;
+
+            @media screen and (min-width: 925px) {
+                font-size: 1.5vw;
+            }
+            @media screen and (max-width: 924px) and (min-width: 646px) {
+                font-size: 2.0vw;
+            }
+            @media screen and (max-width: 645px) {
+                font-size: 2.0vw;
+            }
         }
 
         .text_enter {
@@ -391,13 +405,118 @@ Phone Dimensions: Maximum Width: 645px
 
     }
 }
+.pic_slider {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    overflow: visible;
+    padding-top: 1.5vw;
+    padding-bottom: 8.5vw;
+
+    .p_s_image {
+        padding: 1.5vw;
+        margin-top: 3.5vw;
+
+        & img {
+            width: 65vw;
+            height: auto;
+            border-radius: 10px;
+
+            @media (max-width: 924px) {
+                width: 45vw;
+            }
+            
+            @media (max-width: 645px) {
+                width: 55vw;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    .custom_dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+
+        // Responsive styles
+        @media (max-width: 924px) {
+            display: none;
+        }
+        
+        @media (max-width: 645px) {
+            display: none;
+        }
+    
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #999;
+            border: none;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+    
+            &:hover {
+                background-color: #555;
+            }
+        }
+
+        .active {
+            background-color: red; // Color for the active dot
+        }
+    
+        
+    }
+}
 
 .planned_comp {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: linear-gradient(to right, rgb(18,18,18) , rgb(33,33,33));
+    width: auto;
 
+    .pc_header {
+        transform: translateY(-2.0vw);
+
+        .pc_h_text {
+            padding-left: 10vw;
+            font-size: 2.75vw;
+            font-family: 'Benzin-Bold';
+        }
+    }
+
+    .pc_temp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-2.0vw);
+        padding: 2.5vw;
+
+        .pc_t_text {
+            font-size: 4.5vw;
+            font-family: "Benzin-Regular";
+        }
+    }
 }
 
 .sponsors {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: auto;
 
+    .s_header {
+        margin-top: 6.75vw;
+
+        .s_h_text {
+            padding-left: 10vw;
+            font-size: 2.75vw;
+            font-family: 'Benzin-Bold';
+        }
+    }
 }
 
 @font-face {

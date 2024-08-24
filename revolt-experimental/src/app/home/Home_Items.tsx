@@ -9,7 +9,7 @@ import home_styles2 from "@/styles/Home.module.css";
 import home_style from "@/styles/Home.module.scss";
 import ThreeScene from "./ThreeScene";
 import ThreeSceneTest from "./ThreeScene_Test";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -84,39 +84,80 @@ const WhatWeDo = () => {
             </div>
         </div>
     );
-}
+};
 
+const images = [
+    '/h_pg_images/pic-1.jpg',
+    '/h_pg_images/pic-2.jpg',
+    '/h_pg_images/pic-3.jpg',
+    '/h_pg_images/pic-4.jpg',
+    '/h_pg_images/pic-5.jpg',
+    '/h_pg_images/pic-6.jpg',
+];
 interface PicSliderProps {
     images: string[];
-}
+};
 const PictureSlider: React.FC<PicSliderProps> = ({ images }) => {
 
+    const sliderRef = useRef<Slider>(null);
+    const [currentSlide, setCurrentSlide] = useState(0);
+
     const settings = {
-        dots: true,
+        dots: false,            // Using Custom Ones
         infinite: true,
-        speed: 750,
+        speed: 2000,
         slidesToShow: 3,
         slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        afterChange: (current: number) => setCurrentSlide(current), // Update current slide
         responsive: [
             {
                 breakpoint: 924,
                 settings : {
                     slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: 645,
-                settings : {
-                    slidesToShow: 1,
+                    arrows: true,
+                    dots: false,
                 },
             },
         ],
     };
 
+    const goToSlide = (index: number) => {
+        if (sliderRef.current) {
+          sliderRef.current.slickGoTo(index);
+        }
+    };
+
     return (
-        <p> Text </p>
+        <div className={home_style.pic_slider}>
+            <Slider {...settings} ref={sliderRef}>
+                {images.map((image, index) => (
+                    <div key={index} className={home_style.p_s_image}>
+                        <img src={image} alt={`Slide ${index + 1}`}  />
+                    </div>
+                ))}
+            </Slider>
+            {/* Custom Dots */}
+            <div className={home_style.custom_dots}>
+                {images.map((_, index) => (
+                <button
+                    key={index}
+                    className={`${home_style['dot']} ${currentSlide === index ? home_style['active'] : ''}`}
+                    onClick={() => goToSlide(index)}
+                />
+                ))}
+            </div>
+        </div>
     );
-}
+};
+
+
+/*
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+*/
 
 export default function HomePageItem() {
     return (
@@ -181,18 +222,31 @@ export default function HomePageItem() {
                 <div className={home_style.wwd_content}>
                     <WhatWeDo />
                 </div>
+                <div className={home_style.wwd_pictures}>
+                    <PictureSlider images={ images } />
+                </div>
             </div>
 
             <div className={home_style.planned_comp}>
+                <div className={home_style.pc_header}> 
+                    <h1 className={home_style.pc_h_text}>PLANNED COMPETITIONS</h1>
+                </div>
+
+                {/* Temporary Place Holder (No Planned Competitions) */}
+                <div className={home_style.pc_temp}>
+                    <p className={home_style.pc_t_text}> To Be Announced </p>
+                </div>
 
             </div>
 
             <div className={home_style.sponsors}>
-
+                <div className={home_style.s_header}>
+                    <h1 className={home_style.s_h_text}> SPONSORS</h1>
+                </div>
             </div>
 
             <hr id={home_styles2.hr}></hr>
 
         </main>
     );
-}
+};
