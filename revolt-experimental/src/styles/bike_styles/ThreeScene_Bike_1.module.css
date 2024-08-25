@@ -1,0 +1,26 @@
+/* ThreeScene_Bike_1.module.css */
+
+.parent-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: visible;
+    margin-left: 1vw;
+    margin-right: 2.5vw;
+  }
+  
+  .container {
+    /* top: -1.5vw; Move the container up by 5% of the viewport width */
+    width: 60vw;
+    height: 60vw;
+    background-color: transparent;
+    margin-bottom: -45vw;    
+  }
+  
+  .webgl {
+    position: relative; /* Or 'absolute' if necessary */
+    width: 60vw;
+    height: 60vw;
+    margin-top: -14.5vw;
+    background-color: transparent;
+  }

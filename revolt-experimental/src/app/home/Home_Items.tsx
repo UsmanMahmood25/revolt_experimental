@@ -7,8 +7,8 @@ import Slider from 'react-slick';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import home_styles2 from "@/styles/Home.module.css";
 import home_style from "@/styles/Home.module.scss";
-import ThreeScene from "./ThreeScene";
-import ThreeSceneTest from "./ThreeScene_Test";
+import ThreeSceneDemo from "./ThreeScene_Demo";
+import ThreeSceneMain from "./ThreeScene_HPMain";
 import { useState, useEffect, useRef } from "react";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -105,7 +105,7 @@ const PictureSlider: React.FC<PicSliderProps> = ({ images }) => {
     const settings = {
         dots: false,            // Using Custom Ones
         infinite: true,
-        speed: 2000,
+        speed: 1000,
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
@@ -165,7 +165,7 @@ export default function HomePageItem() {
 
             <div className={home_style.home_pg_header}>
                 <div className={home_style.bike_model}>
-                    <ThreeSceneTest />
+                    <ThreeSceneMain />
                 </div>
                 <div className={home_style.h_pg_h_text}>
                     <div className={home_style.reg_text_1}>

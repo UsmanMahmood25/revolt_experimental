@@ -1,11 +1,15 @@
 
+import VehicleItem from "./Vehicles_Items";
+
 // ReVOLT Timeline Page
 export const metadata = {
-    title: "ReVOLT Timeline Page",
+    title: "ReVOLT Vehicles Page",
 };
 
 export default function Timeline() {
     return (
-        <h1>Timeline Page</h1>
+        <main>
+            <VehicleItem />
+        </main>
     );
 }

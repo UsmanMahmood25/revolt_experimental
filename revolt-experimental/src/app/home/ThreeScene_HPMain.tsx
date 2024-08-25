@@ -1,13 +1,13 @@
 'use client';
 
-import styles from '@/styles/ThreeSceneTest.module.css';
+import styles from '@/styles/bike_styles/ThreeScene_HPMain.module.css';
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import gsap from 'gsap';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
-const ThreeScene = () => {
+const ThreeSceneMain = () => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -121,4 +121,4 @@ const ThreeScene = () => {
     );
 };
 
-export default ThreeScene;
+export default ThreeSceneMain;
