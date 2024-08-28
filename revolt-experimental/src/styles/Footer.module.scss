@@ -48,7 +48,7 @@ Phone Dimensions: Maximum Width: 645px
         align-items: center;
 
         .f_t_1 {
-            font-family: 'Coolvetica-Regular';
+            font-family: 'Helvetica-Regular';
 
             @media screen and (min-width: 925px) {
                 font-size: 15.5px;
@@ -104,4 +104,8 @@ Phone Dimensions: Maximum Width: 645px
 @font-face {
     font-family: "Coolvetica-Regular";
     src: url("font_styles_title/coolvetica\ rg.otf");
+}
+@font-face {
+    font-family: "Helvetica-Regular";
+    src: url("font_styles_title/Helvetica.ttf");
 }

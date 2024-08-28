@@ -108,6 +108,7 @@ export default function VehicleItem() {
                         
                     </div>
                     <div className={vehicle_style.m_s_1_subsection_expand_1}>
+                        <h1>TIMELINE</h1>
                         <div className={vehicle_style.m_s_1_s_e_1_div}>
                             <div className={vehicle_style.m_s_1_s_e_1_text}>
                                 <p>Random Text</p>
@@ -120,7 +121,7 @@ export default function VehicleItem() {
 
                     </div>
 
-                    <label htmlFor='ch' className={vehicle_style.expandbox}>Expand</label>
+                    <label htmlFor='ch' className={vehicle_style.expandbox}>EXPAND</label>
 
                 </div>
             </div>
@@ -170,8 +171,10 @@ export default function VehicleItem() {
                 </div>
             </div> */}
 
+            
 
-            <p> Vehicles </p>
+
+            <p className={vehicle_style.p_h_space}> Place Holder Space </p>
 
         </main>
     );

@@ -18,7 +18,11 @@ Phone Dimensions: Maximum Width: 645px
 
     .margin_setup {
         opacity: 0;
-        margin-bottom: 12.5vw;
+        margin-bottom: 14.5vw;
+    }
+
+    .p_h_space {
+        opacity: 0;
     }
 
     .v_s_1 {
@@ -36,17 +40,19 @@ Phone Dimensions: Maximum Width: 645px
             .expandbox {
                 margin-left: 5vw;
                 font-size: 1.25vw;
-                width: 7.5%;
+                width: 8.2%;
                 padding-left: 0.5vw;
-                font-family: 'Benzin-Bold';
-                color: rgba(28, 28, 27, 0.75);;
-                transform: translateY(-1.0vw);
+                font-family: 'Benzin-Regular';
+                color: black;
+                transform: translateY(-0.75vw);
                 border: solid white;
                 background-color: white;
+                transition: transform 0.3s ease;
             }
     
             .expandbox:hover {
-    
+                transform: scale(1.1) translateY(-0.75vw); 
+
             }
     
             .m_s_1_subsection_1 {
@@ -69,7 +75,7 @@ Phone Dimensions: Maximum Width: 645px
     
                         &.m_s_1_s_1_t_list li {
                             padding: 0.5vw;
-                            list-style: circle;
+                            list-style: square;
                         }
     
                         &.m_s_1_s_1_t_list li p {
@@ -95,10 +101,27 @@ Phone Dimensions: Maximum Width: 645px
             .checkbox:checked ~ .m_s_1_subsection_expand_1 {
                 display: flex;
                 flex-direction: column;
-    
+                animation: slideDown 2s ease forwards;
+                opacity: 1;
+
+                &.m_s_1_subsection_expand_1 h1 {
+                    margin-top: 3.5vw;
+                    padding-left: 3vw;
+                    font-size: 2.75vw;
+                    font-family: 'Benzin-Bold';
+                }
+
                 .m_s_1_s_e_1_div {
                     display: flex;
                     flex-direction: row;
+
+                    .m_s_1_s_e_1_text {
+                        width: 50%;
+                    }
+
+                    .m_s_1_s_e_1_images {
+                        width: 50%
+                    }
                 }
             }
     
@@ -107,9 +130,11 @@ Phone Dimensions: Maximum Width: 645px
                 display: none;
             }
             .m_s_1_subsection_expand_1 {
-                display: none;
+                opacity: 0; 
+                max-height: 0;
+                overflow: hidden;
+                transform: translateY(-1.0vw);
             }
-            
             .checkbox:checked ~ .expandbox {
                 display: none;
             }
@@ -117,6 +142,19 @@ Phone Dimensions: Maximum Width: 645px
     }
 
 }
+
+@keyframes slideDown {
+    0% {
+        max-height: 0;
+        opacity: 0;
+    }
+    100% {
+        max-height: 1000px; /* Adjust this as necessary */
+        opacity: 1;
+    }
+}
+
+
 
 @font-face {
     font-family: "Benzin-Regular";
