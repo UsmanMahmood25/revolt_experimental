@@ -98,6 +98,7 @@ Phone Dimensions: Maximum Width: 645px
     position: relative;
     background: linear-gradient(to right, rgb(18,18,18) , rgb(33,33,33));
     width: auto;
+    z-index: 10;
 
     .wwa_header {
         transform: translateY(-2.0vw);

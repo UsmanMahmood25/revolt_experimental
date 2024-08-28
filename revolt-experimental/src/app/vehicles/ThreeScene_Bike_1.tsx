@@ -6,6 +6,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import gsap from 'gsap';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { mx_trilerp_1 } from 'three/examples/jsm/nodes/materialx/lib/mx_noise.js';
 
 const ThreeScene_Bike1 = () => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -19,12 +20,12 @@ const ThreeScene_Bike1 = () => {
         const loader = new GLTFLoader();
         loader.load('/assets/honda_shadow_rs_2010/scene.gltf', (gltf) => {
             const model = gltf.scene;
-            model.scale.set(2, 2, 2); // Scale the model
+            model.scale.set(2.05, 2.05, 2.05); // Scale the model
             scene.add(model);
 
             // GSAP animations for the model
             const tl = gsap.timeline({ defaults: { duration: 1 } });
-            tl.fromTo(model.scale, { z: 0, x: 0, y: 0 }, { z: 2, x: 2, y: 2 });
+            tl.fromTo(model.scale, { z: 0, x: 0, y: 0 }, { z: 2.2, x: 2.2, y: 2.2 });
         });
 
         // Light setup
@@ -38,9 +39,10 @@ const ThreeScene_Bike1 = () => {
         // Camera setup
         const container = containerRef.current!;
         const { clientWidth: width, clientHeight: height } = container;
-        const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
-        camera.position.z = 8.65;
-        camera.position.y = 5.5;
+        const camera = new THREE.PerspectiveCamera(45, width / (height * 0.5), 0.01, 10);
+        camera.position.z = 4.75;
+        camera.position.y = 5.75;
+        camera.lookAt(new THREE.Vector3(0.2, 0.2, -0.2));
         scene.add(camera);
 
         // Renderer setup
@@ -55,7 +57,7 @@ const ThreeScene_Bike1 = () => {
         controls.enablePan = false;
         controls.enableZoom = false;
         controls.autoRotate = true;
-        controls.autoRotateSpeed = 5;
+        controls.autoRotateSpeed = 4;       // Updated Roate Speed from 5 to 4
         controls.update();
 
         // Lock rotation to the X-axis only

@@ -55,7 +55,7 @@ const ThreeSceneMain = () => {
         controls.enablePan = false;
         controls.enableZoom = false;
         controls.autoRotate = true;
-        controls.autoRotateSpeed = 5;
+        controls.autoRotateSpeed = 4;       // Updated Roate Speed from 5 to 4
         controls.update();
 
         // Lock rotation to the X-axis only

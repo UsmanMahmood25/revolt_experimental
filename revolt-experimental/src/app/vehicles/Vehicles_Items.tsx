@@ -6,7 +6,9 @@ import vehicle_style from '@/styles/Vehicles.module.scss';
 
 export default function VehicleItem() {
     return (
-        <main>
+        <main className={vehicle_style.main_content}>
+            
+            <h6 className={vehicle_style.margin_setup}> Margin Set Up </h6>
 
             {/* 
                 //-------------------------------------------------------------------------
@@ -90,13 +92,13 @@ export default function VehicleItem() {
                             <h1>VEHICLE 1</h1>
                             <ul className={vehicle_style.m_s_1_s_1_t_list}>
                                 <li>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ad, minus iste sed modi consequatur itaque corporis ab quasi consequuntur ipsam recusandae magnam error sint odio. Reprehenderit, nobis officia. Illo.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </li>
                                 <li>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ad, minus iste sed modi consequatur itaque corporis ab quasi consequuntur ipsam recusandae magnam error sint odio. Reprehenderit, nobis officia. Illo.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </li>
                                 <li>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ad, minus iste sed modi consequatur itaque corporis ab quasi consequuntur ipsam recusandae magnam error sint odio. Reprehenderit, nobis officia. Illo.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </li>
                             </ul>
                         </div>
@@ -123,7 +125,10 @@ export default function VehicleItem() {
                 </div>
             </div>
 
-            <div className={vehicle_style.v_s_1} id="bike-1">
+
+
+
+            {/* <div className={vehicle_style.v_s_1} id="bike-1">
                 <div className={vehicle_style.main_style_1}>
 
                     <input id='ch' type='checkbox' className={vehicle_style.checkbox}/>
@@ -163,7 +168,7 @@ export default function VehicleItem() {
                     <label htmlFor='ch' className={vehicle_style.expandbox}>Expand</label>
 
                 </div>
-            </div>
+            </div> */}
 
 
             <p> Vehicles </p>

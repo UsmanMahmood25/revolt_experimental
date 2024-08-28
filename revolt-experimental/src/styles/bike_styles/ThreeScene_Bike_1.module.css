@@ -1,26 +1,30 @@
 /* ThreeScene_Bike_1.module.css */
 
 .parent-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    overflow: visible;
-    margin-left: 1vw;
-    margin-right: 2.5vw;
-  }
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  overflow: visible; /* Allow overflow so the model can pop out */
+  margin-left: 1vw;
+  margin-bottom: -12.5vw;
+  margin-top: -5.5vw;
+  offset: bottom 3vw;
+}
+
+.container {
+  width: 57.5vw;
+  height: 35vw; /* Reduced height */
+  background-color: transparent;
+  position: relative; /* Make the container position relative */
+}
+
+.webgl {
+  position: absolute; /* Make the canvas position absolute */
+  top: 6.5svw; /* Adjust the top position to move the model up */
+  left: -0.5vw;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  clip: inset(0 0 50px 0);
   
-  .container {
-    /* top: -1.5vw; Move the container up by 5% of the viewport width */
-    width: 60vw;
-    height: 60vw;
-    background-color: transparent;
-    margin-bottom: -45vw;    
-  }
-  
-  .webgl {
-    position: relative; /* Or 'absolute' if necessary */
-    width: 60vw;
-    height: 60vw;
-    margin-top: -14.5vw;
-    background-color: transparent;
-  }
+}
