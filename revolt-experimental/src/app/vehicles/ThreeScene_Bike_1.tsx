@@ -39,10 +39,9 @@ const ThreeScene_Bike1 = () => {
         // Camera setup
         const container = containerRef.current!;
         const { clientWidth: width, clientHeight: height } = container;
-        const camera = new THREE.PerspectiveCamera(45, width / (height * 0.5), 0.01, 10);
+        const camera = new THREE.PerspectiveCamera(45, width / (height), 0.1, 100);
         camera.position.z = 4.75;
         camera.position.y = 5.75;
-        camera.lookAt(new THREE.Vector3(0.2, 0.2, -0.2));
         scene.add(camera);
 
         // Renderer setup
