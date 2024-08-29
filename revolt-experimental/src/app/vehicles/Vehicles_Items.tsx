@@ -107,17 +107,42 @@ export default function VehicleItem() {
                         </div>
                         
                     </div>
+
                     <div className={vehicle_style.m_s_1_subsection_expand_1}>
+
                         <h1>TIMELINE</h1>
                         <div className={vehicle_style.m_s_1_s_e_1_div}>
+                            <div className={vehicle_style.block}>
+                                <div className={vehicle_style.block2}></div>
+                            </div>
                             <div className={vehicle_style.m_s_1_s_e_1_text}>
-                                <p>Random Text</p>
+                                <div className={vehicle_style.event3}>
+                                    <h2>EVENT 3</h2>
+                                    <h3>Month, Year</h3>
+                                    <div>
+                                        <p className={vehicle_style.text_style}>Description of events</p>
+                                    </div>
+                                </div>
+                                <div className={vehicle_style.event2}>
+                                    <h2>EVENT 2</h2>
+                                    <h3>Month, Year</h3>
+                                    <div>
+                                        <p className={vehicle_style.text_style}>Description of events</p>
+                                    </div>
+                                </div>
+                                <div className={vehicle_style.event1}>
+                                    <h2>EVENT 1</h2>
+                                    <h3>Month, Year</h3>
+                                    <div>
+                                        <p className={vehicle_style.text_style}>Description of events</p>
+                                    </div>
+                                </div>
                             </div>
                             <div className={vehicle_style.m_s_1_s_e_1_images}>
                                 <p>Random Text</p>
                             </div>
                         </div>
-                        <label htmlFor='ch' className={vehicle_style.collapsebox}>Collapse</label>
+                        <label htmlFor='ch' className={vehicle_style.collapsebox}>COLLAPSE</label>
 
                     </div>
 

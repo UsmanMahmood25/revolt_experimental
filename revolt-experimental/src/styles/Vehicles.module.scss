@@ -52,7 +52,6 @@ Phone Dimensions: Maximum Width: 645px
     
             .expandbox:hover {
                 transform: scale(1.1) translateY(-0.75vw); 
-
             }
     
             .m_s_1_subsection_1 {
@@ -101,40 +100,158 @@ Phone Dimensions: Maximum Width: 645px
             .checkbox:checked ~ .m_s_1_subsection_expand_1 {
                 display: flex;
                 flex-direction: column;
-                animation: slideDown 2s ease forwards;
+                animation: slideDown 1.5s ease forwards;
+                max-height: 5000px;
+                margin-top: 1.5vw;
+                transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
                 opacity: 1;
 
                 &.m_s_1_subsection_expand_1 h1 {
-                    margin-top: 3.5vw;
+                    margin-top: 2.5vw;
+                    margin-bottom: 1.5vw;
                     padding-left: 3vw;
                     font-size: 2.75vw;
                     font-family: 'Benzin-Bold';
                 }
 
+                .collapsebox {
+                    margin-left: 5vw;
+                    font-size: 1.25vw;
+                    width: 10.5%;
+                    padding-left: 0.5vw;
+                    margin-bottom: 2.5vw;
+                    font-family: 'Benzin-Regular';
+                    color: black;
+                    transform: translateY(1.75vw);
+                    border: solid white;
+                    background-color: white;
+                    transition: transform 0.3s ease;
+                }
+
+                .collapsebox:hover {
+                    transform: scale(1.1) translateY(1.75vw); 
+                }
+
                 .m_s_1_s_e_1_div {
                     display: flex;
                     flex-direction: row;
+                    
+                    .block {
+                        display: flex;
+                        width: 5%;
+                        justify-content: flex-end;
+
+                        .block2 {
+                            width: 10%;
+                            background-color: white;
+                        }
+                    }
 
                     .m_s_1_s_e_1_text {
-                        width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        width: 47.5%;
+                        padding-left: 1.0vw;
+
+                        .event3 {
+                            padding-bottom: 2.75vw; 
+
+                            &.event3 h2 {
+                                font-family: 'Benzin-Bold';
+                                font-size: 2.0vw;
+                            }
+
+                            &.event3 h3 {
+                                font-family: 'Benzin-Regular';
+                                font-size: 1.65vw;
+                            }
+
+                            &.event3 div {
+                                    padding-top: 1.5vw;
+                                    padding-left: 1vw;
+
+                                    .text_style {
+                                        font-family: 'Helvetica-Regular';
+                                        font-size: 1.25vw;
+                                    }
+                            }
+                        }
+
+                        .event2 {
+                            padding-bottom: 2.75vw; 
+
+                            &.event2 h2 {
+                                font-family: 'Benzin-Bold';
+                                font-size: 2.0vw;
+                            }
+
+                            &.event2 h3 {
+                                font-family: 'Benzin-Regular';
+                                font-size: 1.65vw;
+                            }
+
+                            &.event2 div {
+                                    padding-top: 1.5vw;
+                                    padding-left: 1vw;
+
+                                    .text_style {
+                                        font-family: 'Helvetica-Regular';
+                                        font-size: 1.25vw;
+                                    }
+                            }
+                        }
+
+                        .event1 {
+                            padding-bottom: 2.75vw; 
+
+                            &.event1 h2 {
+                                font-family: 'Benzin-Bold';
+                                font-size: 2.0vw;
+                            }
+
+                            &.event1 h3 {
+                                font-family: 'Benzin-Regular';
+                                font-size: 1.65vw;
+                            }
+
+                            &.event1 div {
+                                    padding-top: 1.5vw;
+                                    padding-left: 1vw;
+
+                                    .text_style {
+                                        font-family: 'Helvetica-Regular';
+                                        font-size: 1.25vw;
+                                    }
+                            }
+                        }
+
                     }
 
                     .m_s_1_s_e_1_images {
-                        width: 50%
+                        width: 47.5%
                     }
                 }
             }
-    
-    
+
             .checkbox {
                 display: none;
             }
-            .m_s_1_subsection_expand_1 {
-                opacity: 0; 
+
+            .checkbox:not(:checked) ~ .m_s_1_subsection_expand_1 {
                 max-height: 0;
-                overflow: hidden;
-                transform: translateY(-1.0vw);
+                opacity: 0;
+                margin-top: 0;
+                transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
             }
+
+            .m_s_1_subsection_expand_1 {
+                overflow: hidden;
+                max-height: 0; /* Initially collapsed */
+                opacity: 0; /* Initially invisible */
+                margin-top: 0; /* Initially no margin */
+                transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
+            }
+
             .checkbox:checked ~ .expandbox {
                 display: none;
             }
@@ -149,8 +266,19 @@ Phone Dimensions: Maximum Width: 645px
         opacity: 0;
     }
     100% {
-        max-height: 1000px; /* Adjust this as necessary */
+        max-height: 5000px; /* Adjust this as necessary */
         opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        max-height: 5000px;
+        opacity: 1;
+    }
+    100% {
+        max-height: 0px; /* Adjust this as necessary */
+        opacity: 0;
     }
 }
 
