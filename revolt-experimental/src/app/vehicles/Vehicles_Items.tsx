@@ -84,7 +84,7 @@ export default function VehicleItem() {
             <div className={vehicle_style.v_s_1} id="bike-1">
                 <div className={vehicle_style.main_style_1}>
 
-                    <input id='ch' type='checkbox' className={vehicle_style.checkbox}/>
+                    <input id='ch1' type='checkbox' className={vehicle_style.checkbox}/>
 
                     <div className={vehicle_style.m_s_1_subsection_1}>
     
@@ -92,13 +92,13 @@ export default function VehicleItem() {
                             <h1>VEHICLE 1</h1>
                             <ul className={vehicle_style.m_s_1_s_1_t_list}>
                                 <li>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <p>Built on a 2010 Honda CBR125 chassis, this frame offers a strong, modular, and lightweight foundation for an electric conversion.</p>
                                 </li>
                                 <li>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <p>Powered by a 96V Battery Pack delivering 59 HP to the wheels of the bike, enabling near instant torque and acceleration.</p>
                                 </li>
                                 <li>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <p>Innovative active Aero technology that significantly improves braking performance and cornering precision</p>
                                 </li>
                             </ul>
                         </div>
@@ -120,33 +120,46 @@ export default function VehicleItem() {
                                     <h2>EVENT 3</h2>
                                     <h3>Month, Year</h3>
                                     <div>
-                                        <p className={vehicle_style.text_style}>Description of events</p>
+                                        <p className={vehicle_style.text_style}>
+                                            Description of events 
+                                        </p>
                                     </div>
                                 </div>
                                 <div className={vehicle_style.event2}>
                                     <h2>EVENT 2</h2>
                                     <h3>Month, Year</h3>
                                     <div>
-                                        <p className={vehicle_style.text_style}>Description of events</p>
+                                        <p className={vehicle_style.text_style}>
+                                            Description of events
+                                        </p>
                                     </div>
                                 </div>
                                 <div className={vehicle_style.event1}>
                                     <h2>EVENT 1</h2>
                                     <h3>Month, Year</h3>
                                     <div>
-                                        <p className={vehicle_style.text_style}>Description of events</p>
+                                        <p className={vehicle_style.text_style}>
+                                            Description of events
+                                        </p>
                                     </div>
                                 </div>
                             </div>
-                            <div className={vehicle_style.m_s_1_s_e_1_images}>
-                                <p>Random Text</p>
+                            <div className={vehicle_style.img_layout}>
+                                <div className={vehicle_style.m_s_1_s_e_1_images}>
+                                    <Image src='/h_pg_images/pic-1.jpg' alt="ReVOLT Logo" width={0} height={0} sizes="150vw" style={{ width: '25vw', height: 'auto' }} className={vehicle_style.img_style} />
+                                    <Image src='/h_pg_images/pic-2.jpg' alt="ReVOLT Logo" width={0} height={0} sizes="150vw" style={{ width: '25vw', height: 'auto' }} className={vehicle_style.img_style} />
+                                    <Image src='/h_pg_images/pic-3.jpg' alt="ReVOLT Logo" width={0} height={0} sizes="150vw" style={{ width: '25vw', height: 'auto' }} className={vehicle_style.img_style} />
+                                    <Image src='/h_pg_images/pic-4.jpg' alt="ReVOLT Logo" width={0} height={0} sizes="150vw" style={{ width: '25vw', height: 'auto' }} className={vehicle_style.img_style} />
+                                    <Image src='/h_pg_images/pic-5.jpg' alt="ReVOLT Logo" width={0} height={0} sizes="150vw" style={{ width: '25vw', height: 'auto' }} className={vehicle_style.img_style} />
+                                    <Image src='/h_pg_images/pic-6.jpg' alt="ReVOLT Logo" width={0} height={0} sizes="150vw" style={{ width: '25vw', height: 'auto' }} className={vehicle_style.img_style} />
+                                </div>
                             </div>
                         </div>
-                        <label htmlFor='ch' className={vehicle_style.collapsebox}>COLLAPSE</label>
+                        <label htmlFor='ch1' className={vehicle_style.collapsebox}>COLLAPSE</label>
 
                     </div>
 
-                    <label htmlFor='ch' className={vehicle_style.expandbox}>EXPAND</label>
+                    <label htmlFor='ch1' className={vehicle_style.expandbox}>EXPAND</label>
 
                 </div>
             </div>
@@ -154,47 +167,90 @@ export default function VehicleItem() {
 
 
 
-            {/* <div className={vehicle_style.v_s_1} id="bike-1">
-                <div className={vehicle_style.main_style_1}>
+            {/* <div className={vehicle_style.v_s_2} id="bike-2">
+                <div className={vehicle_style.main_style_2}>
 
-                    <input id='ch' type='checkbox' className={vehicle_style.checkbox}/>
+                    <input id='ch2' type='checkbox' className={vehicle_style.checkbox}/>
 
-                    <div className={vehicle_style.m_s_1_subsection_1}>
-                        <div className={vehicle_style.m_s_1_s_1_text}>
-                            <h1>Random Text</h1>
-                            <ul className={vehicle_style.m_s_1_s_1_t_list}>
+                    <div className={vehicle_style.m_s_2_subsection_2}>
+    
+                         <div className={vehicle_style.m_s_2_s_2_model}>
+                            <ThreeScene_Bike1 />
+                        </div>
+                        <div className={vehicle_style.m_s_2_s_2_text}>
+                            <h1>VEHICLE 2</h1>
+                            <ul className={vehicle_style.m_s_2_s_2_t_list}>
                                 <li>
-
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </li>
                                 <li>
-
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </li>
                                 <li>
-
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </li>
                             </ul>
                         </div>
-                        <div className={vehicle_style.m_s_1_s_1_model}>
-                            <ThreeScene_Bike1 />
-                        </div>
-                    </div>
-                    <div className={vehicle_style.m_s_1_subsection_expand_1}>
-                        <div className={vehicle_style.m_s_1_s_e_1_div}>
-                            <div className={vehicle_style.m_s_1_s_e_1_text}>
-                                <p>Random Text</p>
-                            </div>
-                            <div className={vehicle_style.m_s_1_s_e_1_images}>
-                                <p>Random Text</p>
-                            </div>
-                        </div>
-                        <label htmlFor='ch' className={vehicle_style.collapsebox}>Collapse</label>
 
                     </div>
 
-                    <label htmlFor='ch' className={vehicle_style.expandbox}>Expand</label>
+                    <div className={vehicle_style.m_s_2_subsection_expand_2}>
+
+                        <h1>TIMELINE</h1>
+                        <div className={vehicle_style.m_s_2_s_e_2_div}>
+                            <div className={vehicle_style.img_layout}>
+                                <div className={vehicle_style.m_s_2_s_e_2_images}>
+                                    <Image src='/h_pg_images/pic-1.jpg' alt="ReVOLT Logo" width={0} height={0} sizes="100vw" style={{ width: '25vw', height: 'auto' }} className={vehicle_style.img_style} />
+                                    <Image src='/h_pg_images/pic-2.jpg' alt="ReVOLT Logo" width={0} height={0} sizes="100vw" style={{ width: '25vw', height: 'auto' }} className={vehicle_style.img_style} />
+                                    <Image src='/h_pg_images/pic-3.jpg' alt="ReVOLT Logo" width={0} height={0} sizes="100vw" style={{ width: '25vw', height: 'auto' }} className={vehicle_style.img_style} />
+                                    <Image src='/h_pg_images/pic-4.jpg' alt="ReVOLT Logo" width={0} height={0} sizes="100vw" style={{ width: '25vw', height: 'auto' } }className={vehicle_style.img_style} />
+                                    <Image src='/h_pg_images/pic-5.jpg' alt="ReVOLT Logo" width={0} height={0} sizes="100vw" style={{ width: '25vw', height: 'auto' }} className={vehicle_style.img_style} />
+                                    <Image src='/h_pg_images/pic-6.jpg' alt="ReVOLT Logo" width={0} height={0} sizes="100vw" style={{ width: '25vw', height: 'auto' }} className={vehicle_style.img_style} />
+                                </div>
+                            </div>
+                            <div className={vehicle_style.block}>
+                                <div className={vehicle_style.block2}></div>
+                            </div>
+                            <div className={vehicle_style.m_s_2_s_e_2_text}>
+                                <div className={vehicle_style.event3}>
+                                    <h2>EVENT 3</h2>
+                                    <h3>Month, Year</h3>
+                                    <div>
+                                        <p className={vehicle_style.text_style}>
+                                            Description of events
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className={vehicle_style.event2}>
+                                    <h2>EVENT 2</h2>
+                                    <h3>Month, Year</h3>
+                                    <div>
+                                        <p className={vehicle_style.text_style}>
+                                            Description of events
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className={vehicle_style.event1}>
+                                    <h2>EVENT 1</h2>
+                                    <h3>Month, Year</h3>
+                                    <div>
+                                        <p className={vehicle_style.text_style}>
+                                            Description of events
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <label htmlFor='ch2' className={vehicle_style.collapsebox}>COLLAPSE</label>
+
+                    </div>
+
+                    <label htmlFor='ch2' className={vehicle_style.expandbox}>EXPAND</label>
 
                 </div>
             </div> */}
+
+            
 
             
 

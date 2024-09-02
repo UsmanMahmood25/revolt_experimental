@@ -19,7 +19,7 @@ function Footer() {
 
       <div className={footer_styles.footer_text}>
         <p className={footer_styles.f_t_1}>2500 University Dr NW, Calgary</p>
-        <p className={footer_styles.f_t_1}> Copyright &copy 2024 ReVOLT</p>
+        <p className={footer_styles.f_t_1}> Copyright © 2024 ReVOLT</p>
         <p className={footer_styles.f_t_1}>All right reserved</p>
       </div>
 

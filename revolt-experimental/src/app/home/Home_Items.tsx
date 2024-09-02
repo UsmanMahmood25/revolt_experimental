@@ -20,21 +20,21 @@ const WhatWeDo = () => {
 
     const whatWeDoInfo: Record<InfoContent, string[]> = {
         "RESTORE" : [
-            "Text 1, Holy Molly Dude Text 1, Holy Molly Dude Text 1, Holy Molly Dude Text 1, Holy Molly Dude Text 1, Holy Molly Dude",
-            "Text 1, Holy Molly Dude Text 1, Holy Molly Dude Text 1, Holy Molly Dude Text 1, Holy Molly Dude Text 1, Holy Molly Dude",
-            "Text 1, Holy Molly Dude Text 1, Holy Molly Dude Text 1, Holy Molly Dude Text 1, Holy Molly Dude Text 1, Holy Molly Dude",
+            "At the forefront of ReVOLT's mission is restoration by breathing life into old vehicles.",
+            "We prioritize innovation, aiming to implement untested ideas with every project we undertake.",
+            "The club specializes in the transformation of gas vehicles into modern eletric powertrains.",
         ],
 
         "INNOVATE" : [
-            "Text 2, Awesome Dude Text 2, Awesome Dude Text 2, Awesome Dude Text 2, Awesome Dude Text 2, Awesome Dude",
-            "Text 2, Awesome Dude Text 2, Awesome Dude Text 2, Awesome Dude Text 2, Awesome Dude Text 2, Awesome Dude",
-            "Text 2, Awesome Dude Text 2, Awesome Dude Text 2, Awesome Dude Text 2, Awesome Dude Text 2, Awesome Dude",
+            "At the forefront of ReVOLT's mission is restoration by breathing life into old vehicles.",
+            "We prioritize innovation, aiming to implement untested ideas with every project we undertake.",
+            "The club specializes in the transformation of gas vehicles into modern eletric powertrains.",
         ],
 
         "MODERNIZE" : [
-            "Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang",
-            "Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang",
-            "Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang Text 3, Woah Guy/Gal/Them/Gang",               
+            "At the forefront of ReVOLT's mission is restoration by breathing life into old vehicles.",
+            "We prioritize innovation, aiming to implement untested ideas with every project we undertake.",
+            "The club specializes in the transformation of gas vehicles into modern eletric powertrains.",               
         ]
     }
     
@@ -57,7 +57,7 @@ const WhatWeDo = () => {
                 </div>  
             </div>
             <div className={home_style.wwd_c_m_info}>
-                <SwitchTransition mode="out-in">
+                {/* <SwitchTransition mode="out-in">
                     <CSSTransition
                         key={activeChoice}
                         addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
@@ -67,7 +67,7 @@ const WhatWeDo = () => {
                             exit: home_style.text_exit,
                             exitActive: home_style.text_exit_active,
                         }}
-                    >
+                    > */}
                         <div>
                             {activeChoice ? (
                                 <ul>
@@ -76,11 +76,15 @@ const WhatWeDo = () => {
                                     ))}
                                 </ul>
                             ) : (
-                                <p className={home_style.temp_text}>Select one of the 3 options to see more details</p>
+                                <>
+                                <p className={home_style.temp_text}>At the forefront of ReVOLT's mission is restoration by breathing life into old vehicles.</p>
+                                <p className={home_style.temp_text}>We prioritize innovation, aiming to implement untested ideas with every project we undertake.</p>
+                                <p className={home_style.temp_text}>The club specializes in the transformation of gas vehicles into modern eletric powertrains.</p>
+                                </>
                             )}
                         </div>
-                    </CSSTransition>
-                </SwitchTransition>
+                    {/* </CSSTransition>
+                </SwitchTransition> */}
             </div>
         </div>
     );
@@ -195,17 +199,17 @@ export default function HomePageItem() {
                         <ul className={home_style.wwa_c_list}>
                             <li className={home_style.wwa_c_l_style}>
                                 <p className={home_style.wwa_c_t_style}>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione quam corrupti reprehenderit commodi consequuntur omnis, asperiores vero nam totam, distinctio quia accusamus pariatur amet fugit cumque. Tempora molestiae provident labore?
+                                    We are ReVOLT EV, a design team based in the university of Calgary focused on the development and innovation of EV vehicles.
                                 </p>
                             </li>
                             <li className={home_style.wwa_c_l_style}>
                                 <p className={home_style.wwa_c_t_style}>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ullam eos voluptatum sed, aperiam officia odio dignissimos voluptatem deleniti excepturi earum maiores, quod debitis. Consequatur, accusamus! Labore, dolor! Quibusdam, facere.
+                                    Our first project transforms a motorcycle from gas to electric power, blending restoration with cutting-edge modernization.
                                 </p>
                             </li>
                             <li className={home_style.wwa_c_l_style}>
                                 <p className={home_style.wwa_c_t_style}>
-                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta mollitia provident unde molestiae reiciendis quaerat voluptates facilis officia inventore itaque labore aut placeat amet, at, delectus dolores dicta ipsum voluptas? 
+                                   The finished motorcycle will race at the AHRMA Formula Lightning eVarsity Challenge this comming June.
                                 </p>
                             </li>
                         </ul>
@@ -232,16 +236,47 @@ export default function HomePageItem() {
                     <h1 className={home_style.pc_h_text}>PLANNED COMPETITIONS</h1>
                 </div>
 
-                {/* Temporary Place Holder (No Planned Competitions) */}
-                <div className={home_style.pc_temp}>
-                    <p className={home_style.pc_t_text}> To Be Announced </p>
+                <div className={home_style.pc_main_text}>
+                    <div className={home_style.pc_m_text}>
+                        <h2>AHRMA eMoto Varsity 2025</h2>
+                        <ul className={home_style.pc_m_list}>
+                            <li>
+                                <p>Racing against other universities and private teams.</p>
+                            </li>
+                            <li>
+                                <p>Competing to race fastest lap possible on the New Jersey Motorsports Park.</p>
+                            </li>
+                            <li>
+                                <p>Evaluated for technical proficiency by motor experts.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className={home_style.pc_m_img}>
+                        <Image src="/h_pg_images/AHRMA_logo.png" alt="AHRMA Image" width={0} height={0} sizes="100vw" style={{ width: '42.5vw', height: 'auto', }} />
+                    </div>
+
                 </div>
+
+
+                {/* Temporary Place Holder (No Planned Competitions) */}
+
+                {/* <div className={home_style.pc_temp}>
+                    <p className={home_style.pc_t_text}> To Be Announced </p>
+                </div> */}
 
             </div>
 
             <div className={home_style.sponsors}>
                 <div className={home_style.s_header}>
                     <h1 className={home_style.s_h_text}> SPONSORS</h1>
+                </div>
+                <div className={home_style.s_images}>
+
+                    {/* <Image src='' alt='' sizes={'150vw'} width={0} height={0} style={{}} /> */}
+
+                    <Image src='/sponsor_images/onshape_logo_full.png' alt='OnShape' sizes={'150vw'} width={0} height={0} style={{ width: '50vw', height: 'auto' }} />
+                    <Image src='/sponsor_images/ucalgary_logo_full.png' alt='UCalgary' sizes={'150vw'} width={0} height={0} style={{ width: '25vw', height: 'auto' }} /> 
+                    
                 </div>
             </div>
 

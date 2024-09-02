@@ -1,9 +1,21 @@
 
 /* 
 -----------------------------------------------------------------
-Laptop Dimensions: Minimum Width: 925px
-Tablet Dimensions: Minimum Width: 646px, Maximum Width: 924px
-Phone Dimensions: Maximum Width: 645px 
+Laptop Dimensions (LD): Minimum Width: 925px
+Tablet Dimensions (TD): Minimum Width: 646px, Maximum Width: 924px
+Phone Dimensions (PD): Maximum Width: 645px 
+-----------------------------------------------------------------
+*/
+
+/*
+-----------------------------------------------------------------
+Home Page Sub Headers (Who We Are, etc):
+    - For all Dimensions: 2.75vw
+
+Home Page Text Content:
+    - (LD): 1.5vw
+    - (TD): 2.0vw
+    - (PD): 2.5vw
 -----------------------------------------------------------------
 */
 
@@ -104,7 +116,7 @@ Phone Dimensions: Maximum Width: 645px
         transform: translateY(-2.0vw);
 
         .wwa_h_text {
-            padding-left: 10vw;
+            padding-left: 7.5vw;
             font-size: 2.75vw;
             font-family: 'Benzin-Bold';
         }
@@ -150,25 +162,44 @@ Phone Dimensions: Maximum Width: 645px
                 
                 @media screen and (min-width: 925px) {
                     flex-direction: column;
+                    list-style-position: inside;
+                    padding-left: 2vw;
                 }
                 @media screen and (max-width: 924px) and (min-width: 646px) {
                     flex-direction: row;
+                    padding-left: 2vw;
                 }
                 @media screen and (max-width: 645px) {
                     flex-direction: row;
+                    padding: 2vw;
                 }
 
                 .wwa_c_l_style {
-                    padding: 2vw;
+                    padding-top: 2vw;
+                    padding-bottom: 1vw;
+
+                    @media screen and (min-width: 925px) {
+                        list-style: square;
+                    }
+                    @media screen and (max-width: 924px) and (min-width: 646px) {
+                        text-align: center;
+                        padding: 2vw;
+                    }
+                    @media screen and (max-width: 645px) {
+                        text-align: center;
+                        padding: 2vw;
+                    }
+                    
 
                     .wwa_c_t_style {
                         font-family: 'Helvetica-Regular';
 
                         @media screen and (min-width: 925px) {
-                            font-size: 1vw;
+                            font-size: 1.5vw;
                         }
                         @media screen and (max-width: 924px) and (min-width: 646px) {
                             font-size: 2vw;
+                            text-align: center;
                         }
                         @media screen and (max-width: 645px) {
                             font-size: 2.5vw;
@@ -280,10 +311,12 @@ Phone Dimensions: Maximum Width: 645px
             font-family: "Benzin-Bold";
             padding-top: 1.5vw;
             transition: 0.5s;
+            cursor: default;
     
             &.wwd_c_m_buttons:hover {
                 font-family: "Benzin-Regular";
                 transition: 1.5s;
+                cursor: default;
             }
     
             @media screen and (min-width: 925px) {
@@ -307,6 +340,7 @@ Phone Dimensions: Maximum Width: 645px
             .wwd_c_m_b_type {
                 margin-top: -3.5vw;
                 transition: 0.5s;
+                cursor: default;
     
                 @media screen and (min-width: 925px) {
                     font-size: 6.5vw;
@@ -326,6 +360,11 @@ Phone Dimensions: Maximum Width: 645px
                     font-family: "Benzin-Bold";
                     color: red;
                     transform: scale(1.01);
+                    cursor: default;
+                }
+
+                .wwd_c_m_b_t_style {
+                    cursor: default;
                 }
                 
             }
@@ -350,15 +389,17 @@ Phone Dimensions: Maximum Width: 645px
         }
         @media screen and (max-width: 924px) and (min-width: 646px) {
             width: 100%;
-            font-size: 2.5vw;
+            font-size: 2.0vw;
             padding-left: 6.0vw;
             padding-right: 4.5vw;
+            text-align: center;
         }
         @media screen and (max-width: 645px) {
             width: 100%;
             font-size: 2.5vw;
             padding-left: 6.5vw;
             padding-right: 4.5vw;
+            text-align: center;
         }
 
         .wwd_c_m_i_style {
@@ -368,15 +409,18 @@ Phone Dimensions: Maximum Width: 645px
         .temp_text {
             font-family: "Helvetica-Regular";
             font-size: 1.5vw;
+            padding: 1.0vw;
 
             @media screen and (min-width: 925px) {
                 font-size: 1.5vw;
             }
             @media screen and (max-width: 924px) and (min-width: 646px) {
                 font-size: 2.0vw;
+                text-align: center;
             }
             @media screen and (max-width: 645px) {
-                font-size: 2.0vw;
+                font-size: 2.5vw;
+                text-align: center;
             }
         }
 
@@ -483,7 +527,7 @@ Phone Dimensions: Maximum Width: 645px
         transform: translateY(-2.0vw);
 
         .pc_h_text {
-            padding-left: 10vw;
+            padding-left: 7.5vw;
             font-size: 2.75vw;
             font-family: 'Benzin-Bold';
         }
@@ -501,6 +545,55 @@ Phone Dimensions: Maximum Width: 645px
             font-family: "Benzin-Regular";
         }
     }
+
+    .pc_main_text {
+        display: flex;
+        flex-direction: row;
+    
+        .pc_m_text {
+            width: 50%;
+    
+            &.pc_m_text h2 {
+                font-size: 2.0vw;
+                font-family: "benzin-Bold";
+                margin-left: 7.5vw;
+                margin-bottom: 2.5vw;
+            }
+    
+            .pc_m_list {
+                margin: 0;
+                padding-left: 8.5vw;
+                list-style-position: inside; /* This ensures the list style is inside the content box */
+            
+                li {
+                    list-style: square;
+                    margin-left: 20px; /* Add margin if necessary */
+                    margin-top: 10px;
+                    
+                    p {
+                        font-size: 1.5vw;
+                        font-family: "Helvetica-Regular";
+                        padding-bottom: 1.0vw;
+
+                        @media screen and (max-width: 924px) and (min-width: 646px) {
+                            font-size: 2.0vw;
+                        }
+                        @media screen and (max-width: 645px) {
+                            font-size: 2.5vw;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .pc_m_img {
+            display: flex;
+            width: 50%;
+            align-items: center;
+            justify-content: center;
+            
+        }
+    }
 }
 
 .sponsors {
@@ -510,13 +603,23 @@ Phone Dimensions: Maximum Width: 645px
     width: auto;
 
     .s_header {
-        margin-top: 6.75vw;
+        margin-top: 5.75vw;
 
         .s_h_text {
-            padding-left: 10vw;
+            padding-left: 7.5vw;
             font-size: 2.75vw;
             font-family: 'Benzin-Bold';
         }
+    }
+
+    .s_images {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 4.5vw;
+        align-items: center;
+        justify-content: center;
+
     }
 }
 

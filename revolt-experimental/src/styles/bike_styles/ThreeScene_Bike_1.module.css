@@ -12,8 +12,8 @@
 }
 
 .container {
-  width: 57.5vw;
-  height: 35vw; /* Reduced height */
+  width: 60vw;
+  height: 37.5vw; /* Reduced height */
   background-color: transparent;
   position: relative; /* Make the container position relative */
 }

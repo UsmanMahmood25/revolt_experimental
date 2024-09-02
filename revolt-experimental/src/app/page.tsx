@@ -9,3 +9,5 @@ export default function Home() {
 }
 
 //Video 15 - Nested Layouts
+
+// TypeError: Cannot read properties of null (reading 'removeChild')

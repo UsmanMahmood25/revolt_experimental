@@ -6,6 +6,12 @@ Phone Dimensions: Maximum Width: 645px
 -----------------------------------------------------------------
 */
 
+/*
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+*/
+
 
 .main_content {
 
@@ -19,11 +25,23 @@ Phone Dimensions: Maximum Width: 645px
     .margin_setup {
         opacity: 0;
         margin-bottom: 14.5vw;
+
+        @media screen and (max-width: 924px) and (min-width: 646px){
+            margin-bottom: 22.25vw;
+        }
+        @media screen and (max-width: 645px){
+            margin-bottom: 19.5vw;
+        }
     }
 
     .p_h_space {
         opacity: 0;
     }
+
+    //----------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------
 
     .v_s_1 {
         display: flex;
@@ -36,36 +54,103 @@ Phone Dimensions: Maximum Width: 645px
             flex-direction: column;
             background: linear-gradient(to right, rgb(18,18,18) , rgb(33,33,33));
             width: 100%;
+
+            @media screen and (min-width: 925px) {
+                align-items: normal;
+            }
+            @media screen and (max-width: 924px) and (min-width: 646px){
+                align-items: center;
+            }
+            @media screen and (max-width: 645px){
+                align-items: center;
+            }
     
             .expandbox {
+                display: flex;
                 margin-left: 5vw;
-                font-size: 1.25vw;
-                width: 8.2%;
                 padding-left: 0.5vw;
                 font-family: 'Benzin-Regular';
                 color: black;
-                transform: translateY(-0.75vw);
                 border: solid white;
                 background-color: white;
                 transition: transform 0.3s ease;
+
+                @media screen and (min-width: 925px) {
+                    font-size: 1.25vw;
+                    transform: translateY(-0.75vw);
+                    width: 8.2%;
+                    margin-left: 5vw;
+                }
+                @media screen and (max-width: 924px) and (min-width: 646px){
+                    font-size: 1.75vw;
+                    transform: translateY(6.75vw);
+                    margin-bottom: 5.5vw;
+                    width: 11.25%;
+                    margin-left: 1.5vw;
+                }
+                @media screen and (max-width: 645px){
+                    font-size: 1.75vw;
+                    transform: translateY(6.75vw);
+                    margin-bottom: 5.5vw;
+                    width: 11.5%;
+                    margin-left: 1.5vw;
+                }
             }
     
             .expandbox:hover {
-                transform: scale(1.1) translateY(-0.75vw); 
+            
+                @media screen and (min-width: 925px) {
+                    transform: scale(1.1) translateY(-0.75vw);
+                }
+                @media screen and (max-width: 924px) and (min-width: 646px){
+                    transform: scale(1.1) translateY(6.75vw);
+                }
+                @media screen and (max-width: 645px){
+                    transform: scale(1.1) translateY(6.75vw);
+                }
             }
     
             .m_s_1_subsection_1 {
                 display: flex;
-                flex-direction: row;
+
+                @media screen and (min-width: 925px) {
+                    flex-direction: row;
+                }
+                @media screen and (max-width: 924px) and (min-width: 646px){
+                    flex-direction: column;
+                    width: 100%;
+                    
+                }
+                @media screen and (max-width: 645px){
+                    flex-direction: column;
+                    width: 100%;
+                }
     
                 .m_s_1_s_1_text {
-                    width: 50%;
+                    
+                    @media screen and (min-width: 925px) {
+                        width: 50%;
+                    }
+                    @media screen and (max-width: 924px) and (min-width: 646px){
+                        display: flex;
+                        width: 100%;
+                        align-items: center;
+                        flex-direction: column;
+                    }
+                    @media screen and (max-width: 645px){
+                        display: flex;
+                        width: 100%;
+                        align-items: center;
+                        flex-direction: column;
+                    }
                     
                     &.m_s_1_s_1_text h1 {
+                        display: flex;
                         transform: translateY(-2.0vw);
                         padding-left: 3vw;
                         font-size: 2.75vw;
                         font-family: 'Benzin-Bold';
+                        margin-bottom: -1.0vw;
                     }
     
                     .m_s_1_s_1_t_list {
@@ -75,25 +160,56 @@ Phone Dimensions: Maximum Width: 645px
                         &.m_s_1_s_1_t_list li {
                             padding: 0.5vw;
                             list-style: square;
+
+                            @media screen and (max-width: 924px) and (min-width: 646px){
+                                padding: 1.5vw;
+                                list-style: none;
+                                text-align: center;
+                             }
+                             @media screen and (max-width: 645px){
+                                padding: 1.5vw;
+                                list-style: none;
+                                text-align: center;
+                             }
                         }
     
                         &.m_s_1_s_1_t_list li p {
-                            font-size: 1.25vw;
+                            font-size: 1.15vw;
                             font-family: 'Helvetica-Regular';
-                        }
-                        
-                    }
-    
-                    
+
+                            @media screen and (max-width: 924px) and (min-width: 646px){
+                               font-size: 1.75vw;
+                            }
+                            @media screen and (max-width: 645px){
+                                font-size: 1.75vw;
+                            }
+                        } 
+                    }  
                 }
     
                 .m_s_1_s_1_model {
-                    width: 50%;
+                    
                     height: auto;
                     display: flex;
                     overflow: visible;
                     justify-content: center;
-                    margin-top: -3.5vw;
+
+                    @media screen and (min-width: 925px) {
+                        width: 50%;
+                        margin-top: -3.0vw;
+                    }
+                    @media screen and (max-width: 924px) and (min-width: 646px){
+                        width: 100%;
+                        margin-top: -2.25vw;
+                        margin-left: -15.25vw;
+                        margin-bottom: 2.0vw;
+                    }
+                    @media screen and (max-width: 645px){
+                        width: 100%;
+                        margin-top: -1.5vw;
+                        margin-left: -15.25vw;
+                        margin-bottom: 2.5vw;
+                    }
                 } 
             }
     
@@ -105,6 +221,13 @@ Phone Dimensions: Maximum Width: 645px
                 margin-top: 1.5vw;
                 transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
                 opacity: 1;
+
+                @media screen and (max-width: 924px) and (min-width: 646px){
+                    width: 100%
+                }
+                @media screen and (max-width: 645px){
+                    width: 100%
+                }
 
                 &.m_s_1_subsection_expand_1 h1 {
                     margin-top: 2.5vw;
@@ -126,6 +249,15 @@ Phone Dimensions: Maximum Width: 645px
                     border: solid white;
                     background-color: white;
                     transition: transform 0.3s ease;
+
+                    @media screen and (max-width: 924px) and (min-width: 646px){
+                        font-size: 1.75vw;
+                        width: 14.5%
+                    }
+                    @media screen and (max-width: 645px){
+                        font-size: 1.75vw;
+                        width: 14.75%
+                    }
                 }
 
                 .collapsebox:hover {
@@ -150,8 +282,440 @@ Phone Dimensions: Maximum Width: 645px
                     .m_s_1_s_e_1_text {
                         display: flex;
                         flex-direction: column;
-                        width: 47.5%;
                         padding-left: 1.0vw;
+                        width: 47.5%;
+
+                        .event3 {
+                            padding-bottom: 2.75vw; 
+
+                            &.event3 h2 {
+                                font-family: 'Benzin-Bold';
+                                font-size: 2.0vw;
+
+                                @media screen and (max-width: 924px) and (min-width: 646px){
+                                    font-size: 2.25vw;
+                                 }
+                                 @media screen and (max-width: 645px){
+                                     font-size: 2.25vw;
+                                 }
+                            }
+
+                            &.event3 h3 {
+                                font-family: 'Benzin-Regular';
+                                font-size: 1.65vw;
+
+                                @media screen and (max-width: 924px) and (min-width: 646px){
+                                    font-size: 1.75vw;
+                                 }
+                                 @media screen and (max-width: 645px){
+                                     font-size: 1.75vw;
+                                 }
+                            }
+
+                            &.event3 div {
+                                padding-top: 1.5vw;
+                                padding-left: 1vw;
+
+                                .text_style {
+                                    font-family: 'Helvetica-Regular';
+                                    font-size: 1.25vw;
+
+                                    @media screen and (max-width: 924px) and (min-width: 646px){
+                                        font-size: 1.5vw;
+                                        }
+                                        @media screen and (max-width: 645px){
+                                            font-size: 1.5vw;
+                                        }
+                                }
+                            }
+                        }
+
+                        .event2 {
+                            padding-bottom: 2.75vw; 
+
+                            &.event2 h2 {
+                                font-family: 'Benzin-Bold';
+                                font-size: 2.0vw;
+
+                                @media screen and (max-width: 924px) and (min-width: 646px){
+                                    font-size: 2.25vw;
+                                 }
+                                 @media screen and (max-width: 645px){
+                                     font-size: 2.25vw;
+                                 }
+                            }
+
+                            &.event2 h3 {
+                                font-family: 'Benzin-Regular';
+                                font-size: 1.65vw;
+
+                                @media screen and (max-width: 924px) and (min-width: 646px){
+                                    font-size: 1.75vw;
+                                 }
+                                 @media screen and (max-width: 645px){
+                                     font-size: 1.75vw;
+                                 }
+                            }
+
+                            &.event2 div {
+                                padding-top: 1.5vw;
+                                padding-left: 1vw;
+
+                                .text_style {
+                                    font-family: 'Helvetica-Regular';
+                                    font-size: 1.25vw;
+
+                                    @media screen and (max-width: 924px) and (min-width: 646px){
+                                        font-size: 1.5vw;
+                                        }
+                                        @media screen and (max-width: 645px){
+                                            font-size: 1.5vw;
+                                        }
+                                }
+                            }
+                        }
+
+                        .event1 {
+                            padding-bottom: 2.75vw; 
+
+                            &.event1 h2 {
+                                font-family: 'Benzin-Bold';
+                                font-size: 2.0vw;
+
+                                @media screen and (max-width: 924px) and (min-width: 646px){
+                                    font-size: 2.25vw;
+                                 }
+                                 @media screen and (max-width: 645px){
+                                     font-size: 2.25vw;
+                                 }
+                            }
+
+                            &.event1 h3 {
+                                font-family: 'Benzin-Regular';
+                                font-size: 1.65vw;
+
+                                @media screen and (max-width: 924px) and (min-width: 646px){
+                                    font-size: 1.75vw;
+                                 }
+                                 @media screen and (max-width: 645px){
+                                     font-size: 1.75vw;
+                                 }
+                            }
+
+                            &.event1 div {
+                                padding-top: 1.5vw;
+                                padding-left: 1vw;
+
+                                .text_style {
+                                    font-family: 'Helvetica-Regular';
+                                    font-size: 1.25vw;
+
+                                    @media screen and (max-width: 924px) and (min-width: 646px){
+                                        font-size: 1.5vw;
+                                        }
+                                        @media screen and (max-width: 645px){
+                                            font-size: 1.5vw;
+                                        }
+                                }
+                            }
+                        }
+
+                    }
+
+                    .img_layout {
+                        width: 65.5%;
+                        display: flex;
+                        align-items: center;
+                        margin-top: -1.5vw;
+                        margin-right: 1.0vw;
+
+                        .m_s_1_s_e_1_images {
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            justify-content: space-around;
+                            align-items: center;
+                            overflow-y: scroll;
+                            height: 35.5vw;
+
+                            &::-webkit-scrollbar {
+                                width: 0.5vw; /* Width of the scrollbar */
+                            }
+                    
+                            &::-webkit-scrollbar-track {
+                                background: linear-gradient(to right, rgb(18,18,18) , rgb(33,33,33));
+                                border-radius: 10px;
+                            }
+                    
+                            &::-webkit-scrollbar-thumb {
+                                background: #3d3d3d; /* Color of the scrollbar thumb */
+                                border-radius: 10px;
+                                border: 2px solid linear-gradient(to right, rgb(18,18,18) , rgb(33,33,33));; /* Optional: creates space around the thumb */
+                            }
+                    
+                            &::-webkit-scrollbar-thumb:hover {
+                                background: #555; /* Color of the scrollbar thumb on hover */
+                            }
+    
+                            .img_style {
+                                padding: 0.5vw;
+                            }
+                        }
+                    }  
+                }
+            }
+
+            .checkbox {
+                display: none;
+            }
+
+            .checkbox:not(:checked) ~ .m_s_1_subsection_expand_1 {
+                max-height: 0;
+                opacity: 0;
+                margin-top: 0;
+                transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
+            }
+
+            .m_s_1_subsection_expand_1 {
+                overflow: hidden;
+                max-height: 0; /* Initially collapsed */
+                opacity: 0; /* Initially invisible */
+                margin-top: 0; /* Initially no margin */
+                transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
+            }
+
+            .checkbox:checked ~ .expandbox {
+                display: none;
+            }
+        }
+    }
+
+    //----------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------
+
+    .v_s_2 {
+        display: flex;
+        width: 100%;
+        margin-bottom: auto;
+        margin-bottom: 12.5vw;
+    
+        .main_style_2 {
+            display: flex;
+            background: linear-gradient(to right, rgb(18,18,18) , rgb(33,33,33));
+            width: 100%;
+
+            @media screen and (min-width: 925px) {
+                align-items: normal;
+                flex-direction: column;
+            }
+            @media screen and (max-width: 924px) and (min-width: 646px){
+                align-items: center;
+                flex-direction: column;
+            }
+            @media screen and (max-width: 645px){
+                align-items: center;
+                flex-direction: column;
+            }
+    
+            .expandbox {
+                display: flex;
+                margin-left: 55vw;
+                font-size: 1.25vw;
+                width: 8.2%;
+                padding-left: 0.5vw;
+                font-family: 'Benzin-Regular';
+                color: black;
+                border: solid white;
+                background-color: white;
+                transition: transform 0.3s ease;
+
+                @media screen and (min-width: 925px) {
+                    transform: translateY(-0.75vw);
+                    width: 8.2%;
+                }
+                @media screen and (max-width: 924px) and (min-width: 646px){
+                    transform: translateY(6.75vw);
+                    margin-bottom: 5.5vw;
+                    margin-left: 3vw;
+                    width: 8.2%;
+                }
+                @media screen and (max-width: 645px){
+                    transform: translateY(6.75vw);
+                    margin-bottom: 5.5vw;
+                    margin-left: 3vw;
+                    width: 9.2%;
+                }
+            }
+    
+            .expandbox:hover {
+            
+                @media screen and (min-width: 925px) {
+                    transform: scale(1.1) translateY(-0.75vw);
+                }
+                @media screen and (max-width: 924px) and (min-width: 646px){
+                    transform: scale(1.1) translateY(6.75vw);
+                }
+                @media screen and (max-width: 645px){
+                    transform: scale(1.1) translateY(6.75vw);
+                }
+            }
+    
+            .m_s_2_subsection_2 {
+                display: flex;
+
+                @media screen and (min-width: 925px) {
+                    flex-direction: row;
+                }
+                @media screen and (max-width: 924px) and (min-width: 646px){
+                    flex-direction: column-reverse;
+                    width: 100%;
+                    
+                }
+                @media screen and (max-width: 645px){
+                    flex-direction: column-reverse;
+                    width: 100%;
+                }
+    
+                .m_s_2_s_2_text {
+                    
+                    @media screen and (min-width: 925px) {
+                        width: 50%;
+                    }
+                    @media screen and (max-width: 924px) and (min-width: 646px){
+                        display: flex;
+                        width: 100%;
+                        align-items: center;
+                        flex-direction: column;
+                    }
+                    @media screen and (max-width: 645px){
+                        display: flex;
+                        width: 100%;
+                        align-items: center;
+                        flex-direction: column;
+                    }
+                    
+                    &.m_s_2_s_2_text h1 {
+                        display: flex;
+                        transform: translateY(-2.0vw);
+                        padding-left: 3vw;
+                        font-size: 2.75vw;
+                        font-family: 'Benzin-Bold';
+                    }
+    
+                    .m_s_2_s_2_t_list {
+                        padding-left: 4.5vw;
+                        padding-bottom: 1.5vw;
+    
+                        &.m_s_2_s_2_t_list li {
+                            padding: 0.5vw;
+                            list-style: square;
+                        }
+    
+                        &.m_s_2_s_2_t_list li p {
+                            font-size: 1.25vw;
+                            font-family: 'Helvetica-Regular';
+                        } 
+                    }  
+                }
+    
+                .m_s_2_s_2_model {
+                    
+                    height: auto;
+                    display: flex;
+                    overflow: visible;
+                    justify-content: center;
+                    margin-top: -3.5vw;
+
+                    @media screen and (min-width: 925px) {
+                        width: 50%;
+                        margin-top: -3.5vw;
+                    }
+                    @media screen and (max-width: 924px) and (min-width: 646px){
+                        width: 100%;
+                        margin-top: -2.25vw;
+                        margin-left: -15.25vw;
+                        margin-bottom: 2.0vw;
+                    }
+                    @media screen and (max-width: 645px){
+                        width: 100%;
+                        margin-top: -1.5vw;
+                        margin-left: -15.25vw;
+                        margin-bottom: 2.5vw;
+                    }
+                } 
+            }
+    
+            .checkbox:checked ~ .m_s_2_subsection_expand_2 {
+                display: flex;
+                flex-direction: column;
+                animation: slideDown 1.5s ease forwards;
+                max-height: 5000px;
+                margin-top: 1.5vw;
+                transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
+                opacity: 1;
+
+                @media screen and (max-width: 924px) and (min-width: 646px){
+                    width: 100%
+                }
+                @media screen and (max-width: 645px){
+                    width: 100%
+                }
+
+                &.m_s_2_subsection_expand_2 h1 {
+                    margin-top: 2.5vw;
+                    margin-bottom: 1.5vw;
+                    padding-left: 53.25vw;
+                    font-size: 2.75vw;
+                    font-family: 'Benzin-Bold';
+                }
+
+                .collapsebox {
+                    margin-left: 55vw;
+                    font-size: 1.25vw;
+                    width: 10.5%;
+                    padding-left: 0.5vw;
+                    margin-bottom: 3.5vw;
+                    font-family: 'Benzin-Regular';
+                    color: black;
+                    transform: translateY(1.75vw);
+                    border: solid white;
+                    background-color: white;
+                    transition: transform 0.3s ease;
+
+                    @media screen and (max-width: 924px) and (min-width: 646px){
+                        width: 11.5%
+                    }
+                    @media screen and (max-width: 645px){
+                        width: 10.75%
+                    }
+                }
+
+                .collapsebox:hover {
+                    transform: scale(1.1) translateY(1.75vw); 
+                }
+
+                .m_s_2_s_e_2_div {
+                    display: flex;
+                    flex-direction: row;
+                    
+                    .block {
+                        display: flex;
+                        width: 5%;
+                        justify-content: flex-end;
+
+                        .block2 {
+                            width: 10%;
+                            background-color: white;
+                        }
+                    }
+
+                    .m_s_2_s_e_2_text {
+                        display: flex;
+                        flex-direction: column;
+                        padding-left: 1.0vw;
+                        width: 51.75%;
 
                         .event3 {
                             padding-bottom: 2.75vw; 
@@ -227,9 +791,46 @@ Phone Dimensions: Maximum Width: 645px
 
                     }
 
-                    .m_s_1_s_e_1_images {
-                        width: 47.5%
-                    }
+                    .img_layout {
+                        width: 59.5%;
+                        display: flex;
+                        align-items: center;
+                        margin-top: -1.5vw;
+                        margin-right: -2vw;
+
+                        .m_s_2_s_e_2_images {
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            justify-content: space-around;
+                            align-items: center;
+                            overflow-y: scroll;
+                            height: 35.5vw;
+
+                            &::-webkit-scrollbar {
+                                width: 12px; /* Width of the scrollbar */
+                            }
+                    
+                            &::-webkit-scrollbar-track {
+                                background: linear-gradient(to right, rgb(18,18,18) , rgb(33,33,33));
+                                border-radius: 10px;
+                            }
+                    
+                            &::-webkit-scrollbar-thumb {
+                                background: #3d3d3d; /* Color of the scrollbar thumb */
+                                border-radius: 10px;
+                                border: 2px solid linear-gradient(to right, rgb(18,18,18) , rgb(33,33,33));; /* Optional: creates space around the thumb */
+                            }
+                    
+                            &::-webkit-scrollbar-thumb:hover {
+                                background: #555; /* Color of the scrollbar thumb on hover */
+                            }
+    
+                            .img_style {
+                                padding: 0.5vw;
+                            }
+                        }
+                    }  
                 }
             }
 
@@ -237,14 +838,14 @@ Phone Dimensions: Maximum Width: 645px
                 display: none;
             }
 
-            .checkbox:not(:checked) ~ .m_s_1_subsection_expand_1 {
+            .checkbox:not(:checked) ~ .m_s_2_subsection_expand_2 {
                 max-height: 0;
                 opacity: 0;
                 margin-top: 0;
                 transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
             }
 
-            .m_s_1_subsection_expand_1 {
+            .m_s_2_subsection_expand_2 {
                 overflow: hidden;
                 max-height: 0; /* Initially collapsed */
                 opacity: 0; /* Initially invisible */
@@ -259,6 +860,8 @@ Phone Dimensions: Maximum Width: 645px
     }
 
 }
+
+
 
 @keyframes slideDown {
     0% {
