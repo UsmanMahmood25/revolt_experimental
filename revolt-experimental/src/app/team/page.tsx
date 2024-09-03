@@ -1,4 +1,6 @@
 
+import TeamItem from "./Team_Items";
+
 // ReVOLT Team Page (Main)
 export const metadata = {
     title: "ReVOLT Teams Page",
@@ -6,6 +8,8 @@ export const metadata = {
 
 export default function Team() {
     return (
-        <h1>Team Page</h1>
+        <main>
+            <TeamItem />
+        </main>
     );
 }
