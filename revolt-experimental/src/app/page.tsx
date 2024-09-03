@@ -1,5 +1,6 @@
 
 import HomePage from "./home/page";
+
 export default function Home() {
     return (
         <main>
@@ -7,7 +8,5 @@ export default function Home() {
         </main>
     );
 }
-
-//Video 15 - Nested Layouts
 
 // TypeError: Cannot read properties of null (reading 'removeChild')

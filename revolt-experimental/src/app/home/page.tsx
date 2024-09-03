@@ -3,7 +3,7 @@ import HomePageItem from "./Home_Items"
 
 // ReVOLT Home Page
 export const metadata = {
-    title: "ReVOLT Home Page",
+    title: "ReVOLT",
 };
 
 export default function HomePage() {

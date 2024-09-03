@@ -1,13 +1,63 @@
 'use client';
 
 import { usePathname } from'next/navigation';
+import React, { ReactNode } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Image from "next/image";
 import Link from "next/link";
 import header_styles from "@/styles/Header.module.scss";
 import SidebarComponent from "@/app/Header_Sidebar";
 import { useMediaQuery } from 'react-responsive';
 
-function Header() {924
+interface TransitionLinkProps {
+  to: string;
+  children: ReactNode;
+  href: string;
+}
+
+const TransitionLink: React.FC<TransitionLinkProps> = ({ to, children }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleClicked = () => {
+    const bars = document.getElementById('bars');
+
+    bars?.classList.add('show');
+
+    setTimeout(() => {
+      bars?.classList.remove('show');
+      bars?.classList.add('hide');
+      window.scrollTo(0, 0);
+      navigate(to);
+    }, 800);
+
+    setTimeout(() => {
+      bars?.classList.remove('hide');
+    }, 1600);
+  };
+
+  // Ensure children is a string
+  const childrenString = typeof children === 'string' ? children.toLowerCase() : '';
+
+  return (
+    <a
+      className={location.pathname.includes(childrenString) ? 'active' : ''}
+      onClick={handleClicked}
+    >
+      {children}
+    </a>
+  );
+};
+
+const Bars = () => {
+  return (
+    <div>
+      <div />
+    </div>
+  );
+}
+
+function Header() {
 
   const pathname = usePathname();
 
