@@ -164,7 +164,7 @@ const PictureSlider: React.FC<PicSliderProps> = ({ images }) => {
 ------------------------------------------------------------------------------------
 */
 
-export default function HomePageItem() {
+export function HomePageItem() {
     
     return (
         <main>
