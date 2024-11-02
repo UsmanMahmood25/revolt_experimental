@@ -1,4 +1,7 @@
 
+import dynamic from "next/dynamic";
+import SponsorsItem from "../sponsors/Sponsors_Items";
+
 // ReVOLT Sponsors Page
 export const metadata = {
     title: "ReVOLT Sponsors Page",
@@ -6,6 +9,9 @@ export const metadata = {
 
 export default function Sponsors() {
     return (
-        <h1>Sponsors Page</h1>
+        <main>
+            <SponsorsItem />
+        </main>
+        
     );
 }

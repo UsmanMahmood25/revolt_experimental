@@ -21,6 +21,7 @@ Phone Dimensions: Maximum Width: 645px
     width: 100%;
     height: auto;
     justify-content: center; /* Center the content vertically */
+    overflow-x: hidden;
 
     .margin_setup {
         opacity: 0;

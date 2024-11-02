@@ -45,7 +45,14 @@ const ThreeSceneMain = () => {
 
         // Renderer setup
         const canvas = canvasRef.current!;
-        const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+        const renderer = new THREE.WebGLRenderer({ 
+            canvas, alpha: true,
+            antialias: true,
+            depth: true,
+            stencil: false,
+            preserveDrawingBuffer: false,
+            powerPreference: "high-performance" 
+        });
         renderer.setSize(container.clientWidth, container.clientHeight);
         renderer.setPixelRatio(window.devicePixelRatio || 2);
 
@@ -81,29 +88,6 @@ const ThreeSceneMain = () => {
             requestAnimationFrame(loop);
         };
         loop();
-
-        // // GSAP animations
-        // const tl = gsap.timeline({ defaults: { duration: 1 } });
-        // tl.fromTo(mesh.scale, { z: 0, x: 0, y: 0 }, { z: 1, x: 1, y: 1 });
-        // tl.fromTo('nav', { y: '-100%' }, { y: '0%' });
-        // tl.fromTo('.title', { opacity: 0 }, { opacity: 1 });
-
-        // // Mouse interaction for color change
-        // let mouseDown = false;
-        // let rgb: number[] = [];
-        // window.addEventListener('mousedown', () => (mouseDown = true));
-        // window.addEventListener('mouseup', () => (mouseDown = false));
-        // window.addEventListener('mousemove', (e) => {
-        //     if (mouseDown) {
-        //         rgb = [
-        //             Math.round((e.pageX / window.innerWidth) * 255),
-        //             Math.round((e.pageY / window.innerHeight) * 255),
-        //             150,
-        //         ];
-        //         const newColor = new THREE.Color(`rgb(${rgb.join(',')})`);
-        //         gsap.to(mesh.material.color, { r: newColor.r, g: newColor.g, b: newColor.b });
-        //     }
-        // });
 
         handleResize();
 

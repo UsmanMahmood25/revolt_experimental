@@ -164,7 +164,7 @@ const PictureSlider: React.FC<PicSliderProps> = ({ images }) => {
 ------------------------------------------------------------------------------------
 */
 
-export function HomePageItem() {
+export default function HomePageItem() {
     
     return (
         <main>
@@ -276,8 +276,8 @@ export function HomePageItem() {
 
                     {/* <Image src='' alt='' sizes={'150vw'} width={0} height={0} style={{}} /> */}
 
-                    <Image src='/sponsor_images/onshape_logo_full.png' alt='OnShape' sizes={'150vw'} width={0} height={0} style={{ width: '50vw', height: 'auto' }} />
-                    <Image src='/sponsor_images/ucalgary_logo_full.png' alt='UCalgary' sizes={'150vw'} width={0} height={0} style={{ width: '25vw', height: 'auto' }} /> 
+                    <Image src='/sponsor_images/onshape_logo.png' alt='OnShape' sizes={'150vw'} width={0} height={0} style={{ width: '50vw', height: 'auto', padding: '1.5vw' }} />
+                    <Image src='/sponsor_images/ucalg_schulich_logo.png' alt='UCalgary' sizes={'150vw'} width={0} height={0} style={{ width: '35vw', height: 'auto', paddingRight: '1.5vw', paddingLeft: '1.5vw', paddingBottom: '2.75vw' }} /> 
                     
                 </div>
             </div>

@@ -1,19 +1,16 @@
 
 import dynamic from "next/dynamic";
+import HomePageItem from "../home/Home_Items";
 
 // ReVOLT Home Page
 export const metadata = {
     title: "ReVOLT",
 };
 
-const DynamicHomePage = dynamic(() =>
-    import('../home/Home_Items').then((mod) => mod.HomePageItem)
-)
-
 export default function HomePage() {
     return (
         <main>
-            <DynamicHomePage />
+            <HomePageItem />
         </main>
     );
 }

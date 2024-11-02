@@ -1,19 +1,16 @@
 
 import dynamic from "next/dynamic";
+import VehicleItem from "../vehicles/Vehicles_Items";
 
 // ReVOLT Timeline Page
 export const metadata = {
     title: "ReVOLT Vehicles Page",
 };
 
-const DynamicVehicle = dynamic(() =>
-    import('../vehicles/Vehicles_Items').then((mod) => mod.VehicleItem)
-)
-
 export default function Timeline() {
     return (
         <main>
-            <DynamicVehicle />
+            <VehicleItem />
         </main>
     );
 }
