@@ -24,7 +24,7 @@ function Footer() {
       </div>
 
       <div className={footer_styles.footer_socials}>
-      <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+          {/* <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
             <Image 
               src="/uofc_icon.png" 
               alt="Facebook"
@@ -44,16 +44,16 @@ function Footer() {
           </Link>
           <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
             <Image 
-              src="/linkedin_icon.png" 
+              src="/instagram_icon.png" 
               alt="Instagram"
               width={30}
               height={30}
               className={footer_styles.social_icon}
             />
-          </Link>
-          <Link href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+          </Link> */}
+          <Link href="https://www.linkedin.com/company/revolt-ev/about/" target="_blank" rel="noopener noreferrer">
             <Image 
-              src="/instagram_icon.png" 
+              src="/linkedin_icon.png" 
               alt="LinkedIn"
               width={30}
               height={30}

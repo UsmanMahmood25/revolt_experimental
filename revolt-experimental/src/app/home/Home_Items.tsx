@@ -170,9 +170,9 @@ export default function HomePageItem() {
         <main>
 
             <div className={home_style.home_pg_header}>
-                <div className={home_style.bike_model}>
+                {/* <div className={home_style.bike_model}>
                     <ThreeSceneMain />
-                </div>
+                </div> */}
                 <div className={home_style.h_pg_h_text}>
                     <div className={home_style.reg_text_1}>
                         <p className={home_style.reg_text_1_1}> 
@@ -216,11 +216,11 @@ export default function HomePageItem() {
                             </li>
                         </ul>
                     </div>
-                    <div className={home_style.wwa_c_video}>
+                    {/* <div className={home_style.wwa_c_video}>
                         <iframe className={home_style.wwa_c_v_part}
                             src="https://www.youtube.com/embed/5yor70Px6j4?autoplay=1&mute=1&playlist=5yor70Px6j4&loop=1&controls=0">     
                         </iframe>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
@@ -228,9 +228,9 @@ export default function HomePageItem() {
                 <div className={home_style.wwd_content}>
                     <WhatWeDo />
                 </div>
-                <div className={home_style.wwd_pictures}>
+                {/* <div className={home_style.wwd_pictures}>
                     <PictureSlider images={ images } />
-                </div>
+                </div> */}
             </div>
 
             <div className={home_style.planned_comp}>
@@ -274,6 +274,7 @@ export default function HomePageItem() {
                 </div>
                 <div className={home_style.s_images}>
 
+                    {/* Template to Insert Images */}
                     {/* <Image src='' alt='' sizes={'150vw'} width={0} height={0} style={{}} /> */}
 
                     <Image src='/sponsor_images/onshape_logo.png' alt='OnShape' sizes={'150vw'} width={0} height={0} style={{ width: '50vw', height: 'auto', padding: '1.5vw' }} />

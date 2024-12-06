@@ -54,8 +54,10 @@ Home Page Text Content:
         position: relative;
         flex-direction: column;
         margin-top: 5.5vw;
-        margin-left: 40.5vw;
-        margin-right: 12.75vw;
+        // margin-left: 40.5vw;     // Main Postion
+        // margin-right: 12.75vw;   // Main Position
+        margin-left: 27.5vw;        // Temp Position
+        margin-right: 23.75vw;      // Temp Position
         width: 65%;
         z-index: 8;
 
@@ -522,6 +524,8 @@ Home Page Text Content:
     position: relative;
     background: linear-gradient(to right, rgb(18,18,18) , rgb(33,33,33));
     width: auto;
+    // margin-top: 0vw; // Main Postion
+    margin-top: 5.5vw; // Temp Position
 
     .pc_header {
         transform: translateY(-2.0vw);

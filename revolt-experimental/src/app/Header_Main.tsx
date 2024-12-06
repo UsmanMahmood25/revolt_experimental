@@ -30,7 +30,7 @@ function Header() {
         </div>
   
         <div className={header_styles.header_menu}>
-          <Link href="/" className={`${header_styles.header_buttons} ${pathname === '/' ? header_styles.active : ''}`}>
+          {/* <Link href="/" className={`${header_styles.header_buttons} ${pathname === '/' ? header_styles.active : ''}`}>
             Home
           </Link>
           <Link href="/team" className={`${header_styles.header_buttons} ${pathname === '/team' ? header_styles.active : ''}`}>
@@ -41,11 +41,11 @@ function Header() {
           </Link>
           <Link href="/sponsors" className={`${header_styles.header_buttons} ${pathname === '/sponsors' ? header_styles.active : ''}`}>
             Sponsor Us
-          </Link>
+          </Link> */}
         </div>
 
         <div className={header_styles.header_socials}>
-          <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+          {/* <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
             <Image 
               src="/uofc_icon.png" 
               alt="Facebook"
@@ -65,16 +65,16 @@ function Header() {
           </Link>
           <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
             <Image 
-              src="/linkedin_icon.png" 
+              src="/instagram_icon.png" 
               alt="Instagram"
               width={30}
               height={30}
               className={header_styles.social_icon}
             />
-          </Link>
-          <Link href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+          </Link> */}
+          <Link href="https://www.linkedin.com/company/revolt-ev/about/" target="_blank" rel="noopener noreferrer">
             <Image 
-              src="/instagram_icon.png" 
+              src="/linkedin_icon.png" 
               alt="LinkedIn"
               width={30}
               height={30}
@@ -83,9 +83,9 @@ function Header() {
           </Link>
         </div>
           
-        <div className={header_styles.header_sidebar}>
+        {/* <div className={header_styles.header_sidebar}>
           <SidebarComponent />
-        </div>
+        </div> */}
   
       </header>
     );

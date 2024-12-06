@@ -35,11 +35,11 @@ export default function TeamItem() {
                         <li>
                             <div className={team_style.director}>
                                 <Image
-                                    src=''
+                                    src='/revolt_logo_pic_invert.png'
                                     alt='Director Image'
-                                    width={0}
-                                    height={0}
-                                    style={{}}
+                                    width={125}
+                                    height={125}
+                                    style={{alignContent: "center"}}
                                 />
                                 <h3>Rostom Halouane</h3>
                                 <h4>Director</h4>
@@ -48,10 +48,10 @@ export default function TeamItem() {
                         <li>
                             <div className={team_style.codirector}>
                                 <Image
-                                    src=''
+                                    src='/revolt_logo_pic_invert.png'
                                     alt='Co-Director Image'
-                                    width={0}
-                                    height={0}
+                                    width={125}
+                                    height={125}
                                     style={{}}
                                 />
                                 <h3>Tanveer Parhar</h3>
@@ -61,10 +61,10 @@ export default function TeamItem() {
                         <li>
                             <div className={team_style.secretary}>
                                 <Image
-                                    src=''
+                                    src='/revolt_logo_pic_invert.png'
                                     alt='Secretary Image'
-                                    width={0}
-                                    height={0}
+                                    width={125}
+                                    height={125}
                                     style={{}}
                                 />
                                 <h3>Jun Chao</h3>
@@ -74,10 +74,10 @@ export default function TeamItem() {
                         <li>
                             <div className={team_style.sponsorer}>
                                 <Image
-                                    src=''
+                                    src='/revolt_logo_pic_invert.png'
                                     alt='Patron Image'
-                                    width={0}
-                                    height={0}
+                                    width={125}
+                                    height={125}
                                     style={{}}
                                 />
                                 <h3>Muhammed Rafi</h3>
