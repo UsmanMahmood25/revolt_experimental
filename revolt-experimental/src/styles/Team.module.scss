@@ -18,149 +18,6 @@ Team Page Text Content:
 -----------------------------------------------------------------
 */
 
-.team_page_main {
-
-    .top_space {
-        
-        @media screen and (min-width: 925px) {
-            padding-top: 8.0vh;
-        }
-        @media screen and (max-width: 924px) and (min-width: 646px) {
-            padding-top: 15.0vh;
-        }
-        @media screen and (max-width: 645px) {
-            padding-top: 8.0vh;
-        }
-
-        &.top_space h1 {
-            opacity: 0;
-        }
-    }
-
-    .bottom_space {
-
-        &.bottom_space h1 {
-            opacity: 0;
-        }
-    }
-
-    .main_pic {
-        display: flex;
-        flex-direction: column;
-
-        .m_p_title {
-            padding-left: 7.5vw;
-
-            &.m_p_title h1 {
-                font-size: 2.75vw;
-                font-family: 'Benzin-Bold';
-            }            
-        }
-
-        .m_p_img {
-
-        }
-    }
-
-    .execs {
-        display: flex;
-        flex-direction: column;
-
-        .e_title {
-            padding-left: 7.5vw;
-            padding-bottom: 2.5vw;
-
-            &.e_title h1 {
-                font-size: 2.75vw;
-                font-family: 'Benzin-Bold';
-            }
-        }
-
-        .e_members {
-
-            .e_m_list {
-                display: flex;
-                flex-direction: row;
-                list-style: none;
-                align-items: center;
-                justify-content: space-around;
-                height: 17.5vh;
-
-                .director {
-                    &.director h3 {
-                        text-align: center;
-                        font-family: 'Benzin-Bold';
-                        font-size: 1.5vw;
-                    }
-
-                    &.director h4 {
-                        text-align: center;
-                        font-family: 'Benzin-Bold';
-                        font-size: 1.0vw;
-                    }
-                }
-
-                .codirector {
-                    &.codirector h3 {
-                        text-align: center;
-                        font-family: 'Benzin-Bold';
-                        font-size: 1.5vw;
-                    }
-
-                    &.codirector h4 {
-                        text-align: center;
-                        font-family: 'Benzin-Bold';
-                        font-size: 1.0vw;
-                    }
-                }
-
-                .secretary {
-                    &.secretary h3 {
-                        text-align: center;
-                        font-family: 'Benzin-Bold';
-                        font-size: 1.5vw;
-                    }
-
-                    &.secretary h4 {
-                        text-align: center;
-                        font-family: 'Benzin-Bold';
-                        font-size: 1.0vw;
-                    }
-                }
-
-                .sponsorer {
-                    &.sponsorer h3 {
-                        text-align: center;
-                        font-family: 'Benzin-Bold';
-                        font-size: 1.5vw;
-                    }
-
-                    &.sponsorer h4 {
-                        text-align: center;
-                        font-family: 'Benzin-Bold';
-                        font-size: 1.0vw;
-                    }
-                }
-            }
-        }
-    }
-
-    .sub_teams {
-
-        .s_t_elec {
-
-        }
-
-        .s_t_mech {
-
-        }
-        
-        .s_t_soft {
-            
-        }
-    }
-}
-
 @font-face {
     font-family: "Benzin-Regular";
     src: url("font_styles_title/Benzin-Regular.ttf");
@@ -176,4 +33,16 @@ Team Page Text Content:
 @font-face {
     font-family: "Helvetica-Regular";
     src: url("font_styles_title/Helvetica.ttf");
+}
+
+.team_page_main {
+
+    .top_space {
+
+    }
+    .bottom_space {
+
+    }
+
+    
 }
