@@ -38,11 +38,144 @@ Team Page Text Content:
 .team_page_main {
 
     .top_space {
-
-    }
-    .bottom_space {
-
+        padding-top: 65px;
+        opacity: 0;
     }
 
+    .team_picture {
+        display: flex;
+        flex-direction: column;
+
+        .tp_title {
+            font-family: "Benzin-Bold";
+            font-size: 3.75vh;
+            padding-left: 7.5vw;
+
+            @media screen and (max-width: 924px) {
+                padding-left: 0;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+       
+        .image_container {
+            width: 100%;
+            padding-left: 5vw;
+            padding-right: 5vw;
+            
+            .tp_team {
+                width: 100%;
+                height: 75vh;
+                background-image: url('/BG-Image-2.jpg'); /* Add your image URL */
+                background-attachment: fixed;
+                background-size: cover; /* Adjust image to cover the area */
+                background-position: center; /* Center the image */
+                background-repeat: no-repeat; /* Prevent repetition */
+            }
+        }
+        
+    }
+
+    .break {
+        opacity: 0;
+        padding-top: 60px;
+    }
+
+    .team_section {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        overflow-x: hidden;
     
+        .ts_title {
+            font-family: "Benzin-Bold";
+            font-size: 3.75vh;
+            text-align: center;
+            padding-bottom: 0.5vw;
+            transition: 0.5s;
+        }
+
+        .ts_title:hover {
+            transform: scale(1.1);
+            color: red;
+
+            @media screen and (max-width: 924px) {
+                transform: scale(1);
+                color: inherit;
+            }
+        }
+        
+        .ts_members {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+    
+            .team_member {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 1.55vw;
+                transition: 0.5s;
+
+                @media screen and (max-width: 924px) {
+                    padding-right: 1.75vw;
+                    padding-left: 1.75vw;
+                    padding-top: 1.75vw;
+                    padding-bottom: 4.75vw;
+                }
+
+                .team_member_image {
+                    width: 16vw;
+                    height: inherit;
+                    padding-left: 1vw;
+                    padding-right: 1vw;
+                    border-radius: 50%;
+
+                    @media screen and (max-width: 924px) {
+                        width: 200px;
+                    }
+                }
+                .team_member_name {
+                    font-family: "Benzin-Regular";
+                    font-size: 1.5vw;
+                    padding-top: 0.75vw;
+
+                    @media screen and (max-width: 924px) {
+                        font-size: 20px;
+                    }
+                }
+                .team_member_role {
+                    font-family: "Benzin-Regular";
+                    font-size: 1.25vw;
+
+                    @media screen and (max-width: 924px) {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            .team_member:hover {
+                transform: scale(1.125);
+
+                @media screen and (max-width: 924px) {
+                    transform: scale(1);
+                }
+            }
+        }
+
+        .member_break {
+            padding-bottom: 4.5vw;
+            opacity: 0;
+        }
+
+    }
+
+    .bottom_space {
+        padding-bottom: 5px;
+        opacity: 0;
+    }
 }

@@ -17,25 +17,23 @@ import 'slick-carousel/slick/slick-theme.css';
 const WhatWeDo = () => {
 
     const [activeChoice, setActiveChoice] = useState<InfoContent | ''>("");
-    type InfoContent = 'RESTORE' | 'INNOVATE' | 'MODERNIZE';
+    type InfoContent = 'INNOVATION' | 'SUSTAINABILITY' | 'PERFORMANCE';
 
     const whatWeDoInfo: Record<InfoContent, string[]> = {
-        "RESTORE" : [
+        "INNOVATION" : [
             "At the forefront of ReVOLT's mission is restoration by breathing life into old vehicles.",
             "We prioritize innovation, aiming to implement untested ideas with every project we undertake.",
             "The club specializes in the transformation of gas vehicles into modern eletric powertrains.",
         ],
-
-        "INNOVATE" : [
-            "At the forefront of ReVOLT's mission is restoration by breathing life into old vehicles.",
-            "We prioritize innovation, aiming to implement untested ideas with every project we undertake.",
-            "The club specializes in the transformation of gas vehicles into modern eletric powertrains.",
+        "PERFORMANCE" : [
+            "Performance-focused upgrades ensure maximum efficiency and power in our EV conversions.",
+            "Our designs emphasize lightweight, high-performance materials for optimal speed and endurance.",
+            "We fine-tune every component to achieve superior performance on the track and road.",
         ],
-
-        "MODERNIZE" : [
-            "At the forefront of ReVOLT's mission is restoration by breathing life into old vehicles.",
-            "We prioritize innovation, aiming to implement untested ideas with every project we undertake.",
-            "The club specializes in the transformation of gas vehicles into modern eletric powertrains.",               
+        "SUSTAINABILITY" : [
+            "Sustainability is key—our projects aim to reduce carbon footprints by repurposing existing vehicles.",
+            "We emphasize recyclable materials and energy-efficient designs in every project.",
+            "By converting gas vehicles to electric, we reduce emissions and contribute to a cleaner future.",               
         ]
     }
     
@@ -58,7 +56,7 @@ const WhatWeDo = () => {
                 </div>  
             </div>
             <div className={home_style.wwd_c_m_info}>
-                {/* <SwitchTransition mode="out-in">
+                <SwitchTransition mode="out-in">
                     <CSSTransition
                         key={activeChoice}
                         addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
@@ -68,7 +66,7 @@ const WhatWeDo = () => {
                             exit: home_style.text_exit,
                             exitActive: home_style.text_exit_active,
                         }}
-                    > */}
+                    >
                         <div>
                             {activeChoice ? (
                                 <ul>
@@ -78,14 +76,12 @@ const WhatWeDo = () => {
                                 </ul>
                             ) : (
                                 <>
-                                <p className={home_style.temp_text}>At the forefront of ReVOLT's mission is restoration by breathing life into old vehicles.</p>
-                                <p className={home_style.temp_text}>We prioritize innovation, aiming to implement untested ideas with every project we undertake.</p>
-                                <p className={home_style.temp_text}>The club specializes in the transformation of gas vehicles into modern eletric powertrains.</p>
+                                    <p className={home_style.temp_text}>Click on one of the buttons to learn more.</p>
                                 </>
                             )}
                         </div>
-                    {/* </CSSTransition>
-                </SwitchTransition> */}
+                    </CSSTransition>
+                </SwitchTransition>
             </div>
         </div>
     );
@@ -218,7 +214,7 @@ export default function HomePageItem() {
                     </div>
                     <div className={home_style.wwa_c_video}>
                         <iframe className={home_style.wwa_c_v_part}
-                            src="https://www.youtube.com/embed/5yor70Px6j4?autoplay=1&mute=1&playlist=5yor70Px6j4&loop=1&controls=0">     
+                            src="https://www.youtube.com/embed/5wKvSOgbchs?autoplay=1&mute=0&playlist=5wKvSOgbchs&loop=1&controls=0">     
                         </iframe>
                     </div>
                 </div>
@@ -238,7 +234,7 @@ export default function HomePageItem() {
                     <h1 className={home_style.pc_h_text}>PLANNED COMPETITIONS</h1>
                 </div>
 
-                <div className={home_style.pc_main_text}>
+                {/* <div className={home_style.pc_main_text}>
                     <div className={home_style.pc_m_text}>
                         <h2>AHRMA eMoto Varsity 2025</h2>
                         <ul className={home_style.pc_m_list}>
@@ -256,15 +252,14 @@ export default function HomePageItem() {
                     <div className={home_style.pc_m_img}>
                         <Image src="/h_pg_images/AHRMA_logo.png" alt="AHRMA Image" width={0} height={0} sizes="100vw" style={{ width: '42.5vw', height: 'auto', }} />
                     </div>
-
-                </div>
+                </div> */}
 
 
                 {/* Temporary Place Holder (No Planned Competitions) */}
 
-                {/* <div className={home_style.pc_temp}>
+                <div className={home_style.pc_temp}>
                     <p className={home_style.pc_t_text}> To Be Announced </p>
-                </div> */}
+                </div>
 
             </div>
 

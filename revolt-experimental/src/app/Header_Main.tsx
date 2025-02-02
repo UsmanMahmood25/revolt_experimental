@@ -5,7 +5,30 @@ import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import header_styles from "@/styles/Header.module.scss";
-import SidebarComponent from "@/app/Header_Sidebar";
+import SidebarComponent from "@/app/header_sidebar";
+
+export const CopyLink: React.FC = () => {
+  const handleCopy = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault(); // Prevents navigation
+    const link = "revoltevclub@gmail.com";
+
+    navigator.clipboard.writeText(link)
+      .then(() => alert("Link copied to clipboard!"))
+      .catch(err => console.error("Failed to copy:", err));
+  };
+
+  return (
+    <Link href="revoltevclub@gmail.com" onClick={handleCopy}>
+      <Image 
+        src="/gmail_icon.png" 
+        alt="Gmail Icon"
+        width={30}
+        height={30}
+        className={header_styles.social_icon}
+      />
+    </Link>
+  );
+};
 
 function Header() {
 
@@ -45,24 +68,18 @@ function Header() {
         </div>
 
         <div className={header_styles.header_socials}>
-          <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+          <Link href="https://suuofc.campuslabs.ca/engage/organization/revoltev" target="_blank" rel="noopener noreferrer">
             <Image 
               src="/uofc_icon.png" 
-              alt="Facebook"
+              alt="SUofC Link"
               width={30}
               height={30}
               className={header_styles.social_icon}
             />
           </Link>
-          <Link href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-            <Image 
-              src="/gmail_icon.png" 
-              alt="Twitter"
-              width={30}
-              height={30}
-              className={header_styles.social_icon}
-            />
-          </Link>
+
+          <CopyLink />
+          
           <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
             <Image 
               src="/instagram_icon.png" 

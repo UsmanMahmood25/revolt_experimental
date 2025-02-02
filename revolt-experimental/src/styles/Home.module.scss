@@ -328,13 +328,13 @@ Home Page Text Content:
             }
             @media screen and (max-width: 924px) and (min-width: 646px) {
                 width: 100%;
-                flex-direction: row;
+                flex-direction: column;
                 align-items: center;
                 justify-content: center;
             }
             @media screen and (max-width: 645px) {
                 width: 100%;
-                flex-direction: row;
+                flex-direction: column;
                 align-items: center;
                 justify-content: center;
             }
@@ -345,28 +345,31 @@ Home Page Text Content:
                 cursor: default;
     
                 @media screen and (min-width: 925px) {
-                    font-size: 6.5vw;
-                    padding: 0;
+                    font-size: 4.615vw;
+                    padding-top: 1.0vw;
+                    padding-bottom: 1.0vw;
                 }
                 @media screen and (max-width: 924px) and (min-width: 646px) {
-                    font-size: 4vw;
-                    padding: 1vw;
+                    font-size: 6vw;
+                    padding-top: 1.0vw;
+                    padding-bottom: 1.0vw;
                     
                 }
                 @media screen and (max-width: 645px) {
-                    font-size: 4vw;
-                    padding: 1vw;
+                    font-size: 6vw;
+                    padding-top: 1.0vw;
+                    padding-bottom: 1.0vw;
                 }
     
                 &.wwd_c_m_b_type:hover {
                     font-family: "Benzin-Bold";
                     color: red;
                     transform: scale(1.01);
-                    cursor: default;
+                    cursor: hand;
                 }
 
                 .wwd_c_m_b_t_style {
-                    cursor: default;
+                    cursor: hand;
                 }
                 
             }
@@ -391,7 +394,7 @@ Home Page Text Content:
         }
         @media screen and (max-width: 924px) and (min-width: 646px) {
             width: 100%;
-            font-size: 2.0vw;
+            font-size: 2.5vw;
             padding-left: 6.0vw;
             padding-right: 4.5vw;
             text-align: center;
@@ -417,7 +420,7 @@ Home Page Text Content:
                 font-size: 1.5vw;
             }
             @media screen and (max-width: 924px) and (min-width: 646px) {
-                font-size: 2.0vw;
+                font-size: 3.0vw;
                 text-align: center;
             }
             @media screen and (max-width: 645px) {
