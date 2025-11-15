@@ -77,7 +77,7 @@ const ThreeScene_Bike1 = () => {
         controls.enableDamping = true;
         controls.enablePan = false;
         controls.enableZoom = true;
-        controls.autoRotate = true;
+        controls.autoRotate = false;
         controls.autoRotateSpeed = 4;   
         controls.minDistance = 5;
         controls.maxDistance = 20;
@@ -145,7 +145,9 @@ const ThreeScene_Bike1 = () => {
                 controls.update();             // Apply any pending rotations
                 const targetPoint = intersects[0].point;
                 smoothZoomTo(targetPoint, 0.95, 1.2)
-                controls.autoRotate = true;
+                setTimeout(() => {
+                    controls.autoRotate = true;
+                }, 14000);
             }
         };
 
