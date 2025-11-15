@@ -1,6 +1,6 @@
 
 import dynamic from "next/dynamic";
-import VehicleItem from "../vehicles/Vehicles_Items";
+import VehicleItem from "./Vehicles_Items";
 
 // ReVOLT Timeline Page
 export const metadata = {
