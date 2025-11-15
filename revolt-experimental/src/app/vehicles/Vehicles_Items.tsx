@@ -168,7 +168,7 @@ export default function VehicleItem() {
 
 
 
-            {/* <div className={vehicle_style.v_s_2} id="bike-2">
+            <div className={vehicle_style.v_s_2} id="bike-2">
                 <div className={vehicle_style.main_style_2}>
 
                     <input id='ch2' type='checkbox' className={vehicle_style.checkbox}/>
@@ -249,7 +249,7 @@ export default function VehicleItem() {
                     <label htmlFor='ch2' className={vehicle_style.expandbox}>EXPAND</label>
 
                 </div>
-            </div> */}
+            </div>
 
             
 
